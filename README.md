@@ -9,4 +9,4 @@ Portkey helps your apps become more reliable and affordable for your users. It d
 | Within the... | You'll get to... |
 | --------------- | -------------- |
 | [jupyter-notebooks](/jupyter-notebooks)    | See python snippets for portkey's fallback, completions and load balance capabilities      |
-| [the-hogwarts-kitchen]()    | See an sample web app that demonstrates portkey's caching to save you $$$     |
+| [the-hogwarts-kitchen](/the-hogwarts-kitchen/)    | See an sample web app that demonstrates portkey's caching to save you $$$     |
