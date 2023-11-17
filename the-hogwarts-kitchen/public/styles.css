@@ -1,0 +1,102 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Cinzel", serif;
+}
+
+h1 {
+  font-family: "Cinzel", serif;
+  font-size: 3em;
+  color: #3e2723;
+  margin: 10px;
+  padding-bottom: 2px;
+}
+
+input[type="text"] {
+  width: 50rem;
+  padding: 10px;
+  font-family: "Cinzel", serif;
+  font-size: 16px;
+  color: #3e2723;
+  background-color: #f5f5dc;
+  border: 2px solid #3e2723;
+  border-radius: 5px;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border-color: #6d4c41;
+}
+
+p,
+li {
+  font-family: cursive;
+  padding: 0%;
+  margin-top: 2px;
+}
+
+body {
+  background-color: #f5f5dc;
+}
+
+img {
+  width: auto;
+  height: auto;
+}
+
+button {
+  padding: 10px 10px;
+  margin: 1rem;
+  font-family: "Gill Sans";
+  font-size: 14px;
+  color: #f5f5dc;
+  background-color: #3e2723;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #6d4c41;
+}
+
+.receipe {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-style: oblique;
+  padding: 1rem;
+}
+
+.recipe li {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: appear 0.5s forwards;
+  animation-delay: calc(var(--i) * 0.3s);
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  input[type="text"] {
+    width: 90%;
+  }
+
+  p {
+    padding: 0.6rem;
+  }
+
+  img {
+    display: none;
+  }
+}
