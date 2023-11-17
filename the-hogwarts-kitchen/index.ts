@@ -52,7 +52,7 @@ app.post("/api/axios/recipes", async (req, res) => {
     );
     res.status(200).json(newRecipe.data.choices[0].message);
   } catch (error: any) {
-    console.error("error", error);
+    console.error("error", error.message);
     res.status(400).end("Unexpected error occured");
   }
 });
