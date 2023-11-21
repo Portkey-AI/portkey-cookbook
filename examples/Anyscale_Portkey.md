@@ -102,8 +102,9 @@ Now, just send the Config key with `x-portkey-config` header:
 ```py
 
 PORTKEY_HEADERS = {
-	'x-portkey-api-key': 'PORTKEY_API_KEY',
 	'Content-Type': 'application/json',
+	'x-portkey-api-key': 'PORTKEY_API_KEY',
+	'x-portkey-mode': 'proxy anyscale',
 	# **************************************
 	'x-portkey-config': 'CONFIG_KEY'
 	# **************************************
