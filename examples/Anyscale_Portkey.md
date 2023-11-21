@@ -1,6 +1,6 @@
 # Portkey + Anyscale
 Portkey helps bring Anyscale APIs to production with its abstractions for observability, fallbacks, caching, and more. Use the Anyscale API **through** Portkey for:
-1. **Enhanced Logging**: Track API use with detailed insights.
+1. **Enhanced Logging**: Track API usage with detailed insights.
 2. **Production Reliability**: Automated fallbacks, load balancing, and caching.
 3. **Continuous Improvement**: Collect and apply user feedback.
 4. **Enhanced Fine-Tuning**: Combine logs & user feedback for targetted fine-tuning.
@@ -72,14 +72,18 @@ response = client.chat.completions.create(
 
 print(response.choices[0].message.content)
 ```
+Here’s how your logs will appear on your Portkey dashboard:
+
+<img src="https://portkey.ai/blog/content/images/2023/11/logsgif.gif" alt="header" width=600 />
 
 ### 2. Caching, Fallbacks, Load Balancing
 * **Fallbacks**: Ensure your application remains functional even if a primary service fails.
 * **Load Balancing**: Efficiently distribute incoming requests among multiple models.
 * **Semantic Caching**: Reduce costs and latency by intelligently caching results.
 
-Toggle these features through Portkey's Config builder. Head to the **[Configs tab](https://app.portkey.ai)**—if we want to enable semantic caching + fallback from Llama2 to Mistral, your Portkey config would look like this:
+Toggle these features by saving _Configs_ (from the Portkey dashboard > Configs tab).
 
+If we want to enable semantic caching + fallback from Llama2 to Mistral, your Portkey config would look like this:
 ```json
 {
 	"cache": "semantic",
