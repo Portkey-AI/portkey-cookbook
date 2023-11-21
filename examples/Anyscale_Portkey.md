@@ -6,17 +6,18 @@ Portkey helps bring Anyscale APIs to production with its abstractions for observ
 4. **Enhanced Fine-Tuning**: Combine logs & user feedback for targetted fine-tuning.
 
 ### 1.1 Setup & Logging
-1. Obtain your [**Portkey API Key**](https://app.portkey.ai/).
-2. Switch to **Portkey Gateway URL:** `https://api.portkey.ai/v1/chat/completions`
+1. Set `$ export OPENAI_API_KEY=ANYSCALE_API_KEY`
+2. Obtain your [**Portkey API Key**](https://app.portkey.ai/).
+3. Switch to **Portkey Gateway URL:** `https://api.portkey.ai/v1/proxy`
 
 See full logs of requests (latency, cost, tokens)—and dig deeper into the data with their analytics suite.
 ```py
 import openai
 
-PORTKEY_GATEWAY_URL = "https://api.portkey.ai/v1/chat/completions"
+PORTKEY_GATEWAY_URL = "https://api.portkey.ai/v1/proxy"
 
 PORTKEY_HEADERS = {
-	'Authorization': Bearer ANYSCALE_KEY',
+	'Authorization': 'Bearer ANYSCALE_KEY',
 	'Content-Type': 'application/json',
 	# **************************************
 	'x-portkey-api-key': 'PORTKEY_API_KEY', 	# Get from https://app.portkey.ai/,
@@ -31,7 +32,7 @@ response = client.chat.completions.create(
     messages=[{"role": "user", "content": "Say this is a test"}]
 )
 
-print(chat_complete.choices[0].message.content)
+print(response.choices[0].message.content)
 ```
 ### 1.2. Enhanced Observability
 * **Trace** requests with single id.
@@ -52,7 +53,7 @@ METADATA = {
 }
 
 PORTKEY_HEADERS = {
-	'Authorization': Bearer ANYSCALE_KEY',
+	'Authorization': 'Bearer ANYSCALE_KEY',
 	'Content-Type': 'application/json',
 	'x-portkey-api-key': 'PORTKEY_API_KEY',
 	'x-portkey-mode': 'proxy anyscale',
@@ -65,11 +66,11 @@ PORTKEY_HEADERS = {
 client = openai.OpenAI(base_url=PORTKEY_GATEWAY_URL, default_headers=PORTKEY_HEADERS)
 
 response = client.chat.completions.create(
-    model="mistralai/Mistral-7B-Instruct-v0.1",
-    messages=[{"role": "user", "content": "Say this is a test"}]
+	model="mistralai/Mistral-7B-Instruct-v0.1",
+	messages=[{"role": "user", "content": "Say this is a test"}]
 )
 
-print(chat_complete.choices[0].message.content)
+print(response.choices[0].message.content)
 ```
 
 ### 2. Caching, Fallbacks, Load Balancing
@@ -102,7 +103,7 @@ Now, just send the Config key with `x-portkey-config` header:
 
 PORTKEY_HEADERS = {
 	'x-portkey-api-key': 'PORTKEY_API_KEY',
-	'Content-Type': 'application/json'
+	'Content-Type': 'application/json',
 	# **************************************
 	'x-portkey-config': 'CONFIG_KEY'
 	# **************************************
@@ -111,10 +112,11 @@ PORTKEY_HEADERS = {
 client = openai.OpenAI(base_url=PORTKEY_GATEWAY_URL, default_headers=PORTKEY_HEADERS)
 
 response = client.chat.completions.create(
-    messages=[{"role": "user", "content": "Say this is a test"}]
+	model="mistralai/Mistral-7B-Instruct-v0.1",
+	messages=[{"role": "user", "content": "Say this is a test"}]
 )
 
-print(chat_complete.choices[0].message.content)
+print(response.choices[0].message.content)
 ```
 
 For more on Configs and other gateway feature like Load Balancing, [check out the docs.](https://docs.portkey.ai/portkey-docs/portkey-features/ai-gateway)
