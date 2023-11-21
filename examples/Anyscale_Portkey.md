@@ -1,7 +1,5 @@
 # Portkey Integration
 
-<img src="https://3798672042-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FeWEp2XRBGxs7C1jgAdk7%2Fuploads%2F4qmG7xtmMEMllZXGo0HW%2FAnyscale%20Cookbook.png?alt=media&token=af7a5e05-858d-4949-9cf1-f030540fccf8" alt="header" width=600 />
-
 **Portkey** is a full-stack LLMOps platform that brings your Anyscale APIs to production reliably.
 
 ### Start logging your Anyscale requests
@@ -74,9 +72,7 @@ print(response.text)
 * **Load Balancing**: Efficiently distribute incoming requests among multiple models.
 * **Semantic Caching**: Reduce costs and latency by intelligently caching results.
 
-Here's how you can toggle these features with Portkey API using Portkey's Config builder.
-
-Head to the **Configs** tab on [Portkey](https://app.portkey.ai) and create a new config. We want to enable semantic caching + fallback from Llama2 to Mistral. Your config would look like this:
+Toggle these features through Portkey's Config builder. Head to the **Configs** tab on [Portkey](https://app.portkey.ai) and create a new config. We want to enable semantic caching + fallback from Llama2 to Mistral. Your config would look like this:
 
 ```json
 {
