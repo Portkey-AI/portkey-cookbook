@@ -12,6 +12,7 @@ Portkey helps bring Anyscale APIs to production with its abstractions for observ
 
 See full logs of requests (latency, cost, tokens)—and dig deeper into the data with their analytics suite.
 ```py
+""" OPENAI PYTHON SDK """
 import openai
 
 PORTKEY_GATEWAY_URL = "https://api.portkey.ai/v1/proxy"
@@ -34,6 +35,72 @@ response = client.chat.completions.create(
 
 print(response.choices[0].message.content)
 ```
+```javascript
+""" OPENAI NODE SDK """
+import OpenAI from 'openai';
+
+const PORTKEY_GATEWAY_URL = "https://api.portkey.ai/v1/proxy"
+
+const PORTKEY_HEADERS = {
+	'Authorization': 'Bearer ANYSCALE_KEY',
+	'Content-Type': 'application/json',
+	// **************************************
+	'x-portkey-api-key': 'PORTKEY_API_KEY', 	// Get from https://app.portkey.ai/,
+	'x-portkey-mode': 'proxy anyscale' 		// Tell Portkey that the request is for Anyscale
+	// **************************************
+}
+
+const openai = new OpenAI({baseURL:PORTKEY_GATEWAY_URL, defaultHeaders:PORTKEY_HEADERS});
+
+async function main() {
+  const chatCompletion = await openai.chat.completions.create({
+    messages: [{ role: 'user', content: 'Say this is a test' }],
+    model: 'mistralai/Mistral-7B-Instruct-v0.1',
+  });
+  console.log(chatCompletion.choices[0].message.content);
+}
+
+main();
+```
+
+```py
+""" REQUESTS LIBRARY """
+import requests
+
+PORTKEY_GATEWAY_URL = "https://api.portkey.ai/v1/proxy/chat/completions"
+
+PORTKEY_HEADERS = {
+	'Authorization': 'Bearer ANYSCALE_KEY',
+	'Content-Type': 'application/json',
+	# **************************************
+	'x-portkey-api-key': 'PORTKEY_API_KEY', 	# Get from https://app.portkey.ai/,
+	'x-portkey-mode': 'proxy anyscale' 		# Tell Portkey that the request is for Anyscale
+	# **************************************
+}
+
+DATA = {
+    "messages": [{"role": "user", "content": "What happens when you mix red & yellow?"}],
+    "model": "mistralai/Mistral-7B-Instruct-v0.1"
+}
+
+response = requests.post(PORTKEY_GATEWAY_URL, headers=PORTKEY_HEADERS, json=DATA)
+
+print(response.text)
+```
+
+```bash
+""" CURL """
+curl "https://api.portkey.ai/v1/proxy/chat/completions" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer ANYSCALE_KEY" \
+  -H "x-portkey-api-key: PORTKEY_API_KEY" \
+  -H "x-portkey-mode: proxy anyscale" \
+  -d '{
+    "model": "meta-llama/Llama-2-70b-chat-hf",
+    "messages": [{"role": "user", "content": "Say 'Test'."}]
+  }'
+```
+
 ### 1.2. Enhanced Observability
 * **Trace** requests with single id.
 * **Append custom tags** for request segmenting & in-depth analysis.
@@ -41,7 +108,10 @@ print(response.choices[0].message.content)
 Just add their relevant headers to your reuqest:
 
 ```py
+""" OPENAI PYTHON SDK """
 import json
+
+PORTKEY_GATEWAY_URL = "https://api.portkey.ai/v1/proxy"
 
 TRACE_ID = 'anyscale_portkey_test'
 
@@ -72,9 +142,100 @@ response = client.chat.completions.create(
 
 print(response.choices[0].message.content)
 ```
+
+```javascript
+""" OPENAI NODE SDK """
+import OpenAI from 'openai';
+
+const PORTKEY_GATEWAY_URL = "https://api.portkey.ai/v1/proxy"
+
+const TRACE_ID = 'anyscale_portkey_test'
+
+const METADATA = {
+    "_environment": "production",
+    "_user": "userid123",
+    "_organisation": "orgid123",
+    "_prompt": "summarisationPrompt"
+}
+
+const PORTKEY_HEADERS = {
+	'Authorization': 'Bearer ANYSCALE_KEY',
+	'Content-Type': 'application/json',
+	'x-portkey-api-key': 'PORTKEY_API_KEY', 	
+	'x-portkey-mode': 'proxy anyscale' 		
+	// **************************************
+	'x-portkey-trace-id': TRACE_ID, 		// Send the trace id
+	'x-portkey-metadata': JSON.stringify(METADATA) 	// Send the metadata
+	// **************************************
+}
+
+const openai = new OpenAI({baseURL:PORTKEY_GATEWAY_URL, defaultHeaders:PORTKEY_HEADERS});
+
+async function main() {
+  const chatCompletion = await openai.chat.completions.create({
+    messages: [{ role: 'user', content: 'Say this is a test' }],
+    model: 'mistralai/Mistral-7B-Instruct-v0.1',
+  });
+  console.log(chatCompletion.choices[0].message.content);
+}
+
+main();
+```
+
+```py
+""" REQUESTS LIBRARY """
+import requests
+
+PORTKEY_GATEWAY_URL = "https://api.portkey.ai/v1/proxy/chat/completions"
+
+TRACE_ID = 'anyscale_portkey_test'
+
+METADATA = {
+    "_environment": "production",
+    "_user": "userid123",
+    "_organisation": "orgid123",
+    "_prompt": "summarisationPrompt"
+}
+
+PORTKEY_HEADERS = {
+	'Authorization': 'Bearer ANYSCALE_KEY',
+	'Content-Type': 'application/json',
+	'x-portkey-api-key': 'PORTKEY_API_KEY',
+	'x-portkey-mode': 'proxy anyscale',
+	# **************************************
+	'x-portkey-trace-id': TRACE_ID, 		# Send the trace id
+	'x-portkey-metadata': json.dumps(METADATA) 	# Send the metadata
+	# **************************************
+}
+
+DATA = {
+    "messages": [{"role": "user", "content": "What happens when you mix red & yellow?"}],
+    "model": "mistralai/Mistral-7B-Instruct-v0.1"
+}
+
+response = requests.post(PORTKEY_GATEWAY_URL, headers=PORTKEY_HEADERS, json=DATA)
+
+print(response.text)
+```
+
+```bash
+""" CURL """
+curl "https://api.portkey.ai/v1/proxy/chat/completions" \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer ANYSCALE_KEY' \
+  -H 'x-portkey-api-key: PORTKEY_KEY' \
+  -H 'x-portkey-mode: proxy anyscale' \
+  -H 'x-portkey-trace-id: TRACE_ID' \
+  -H 'x-portkey-metadata: {"_environment": "production","_user": "userid123","_organisation": "orgid123","_prompt": "summarisationPrompt"}' \
+  -d '{
+    "model": "meta-llama/Llama-2-70b-chat-hf",
+    "messages": [{"role": "user", "content": "Say 'Test'."}]
+  }'
+```
+
 Here’s how your logs will appear on your Portkey dashboard:
 
-<img src="https://portkey.ai/blog/content/images/2023/11/logsgif.gif" alt="header" width=600 />
+<img src="https://portkey.ai/blog/content/images/2023/11/logsgif.gif" />
 
 ### 2. Caching, Fallbacks, Load Balancing
 * **Fallbacks**: Ensure your application remains functional even if a primary service fails.
@@ -104,6 +265,8 @@ If we want to enable semantic caching + fallback from Llama2 to Mistral, your Po
 Now, just send the Config key with `x-portkey-config` header:
 
 ```py
+""" OPENAI PYTHON SDK """
+PORTKEY_GATEWAY_URL = "https://api.portkey.ai/v1/proxy"
 
 PORTKEY_HEADERS = {
 	'Content-Type': 'application/json',
@@ -124,11 +287,74 @@ response = client.chat.completions.create(
 print(response.choices[0].message.content)
 ```
 
+
+```javascript
+""" OPENAI NODE SDK """
+import OpenAI from 'openai';
+
+const PORTKEY_GATEWAY_URL = "https://api.portkey.ai/v1/proxy"
+
+const PORTKEY_HEADERS = {
+	'Content-Type': 'application/json',
+	'x-portkey-api-key': 'PORTKEY_API_KEY',
+	'x-portkey-mode': 'proxy anyscale',
+	// **************************************
+	'x-portkey-config': 'CONFIG_KEY'
+	// **************************************
+}
+
+const openai = new OpenAI({baseURL:PORTKEY_GATEWAY_URL, defaultHeaders:PORTKEY_HEADERS});
+
+async function main() {
+  const chatCompletion = await openai.chat.completions.create({
+    messages: [{ role: 'user', content: 'Say this is a test' }],
+    model: 'mistralai/Mistral-7B-Instruct-v0.1',
+  });
+  console.log(chatCompletion.choices[0].message.content);
+}
+
+main();
+```
+
+```py
+""" REQUESTS LIBRARY """
+import requests
+
+PORTKEY_GATEWAY_URL = "https://api.portkey.ai/v1/proxy/chat/completions"
+
+PORTKEY_HEADERS = {
+	'Content-Type': 'application/json',
+	'x-portkey-api-key': 'PORTKEY_API_KEY',
+	'x-portkey-mode': 'proxy anyscale',
+	# **************************************
+	'x-portkey-config': 'CONFIG_KEY'
+	# **************************************
+}
+
+DATA = {"messages": [{"role": "user", "content": "What happens when you mix red & yellow?"}]}
+
+response = requests.post(PORTKEY_GATEWAY_URL, headers=PORTKEY_HEADERS, json=DATA)
+
+print(response.text)
+```
+
+```bash
+""" CURL """
+curl "https://api.portkey.ai/v1/proxy/chat/completions" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer ANYSCALE_KEY" \
+  -H "x-portkey-api-key: PORTKEY_API_KEY" \
+  -H "x-portkey-mode: proxy anyscale" \
+  -H "x-portkey-config: CONFIG_KEY" \
+  -d '{ "messages": [{"role": "user", "content": "Say 'Test'."}] }'
+```
+
 For more on Configs and other gateway feature like Load Balancing, [check out the docs.](https://docs.portkey.ai/portkey-docs/portkey-features/ai-gateway)
 
 ### 3. Collect Feedback
 Gather weighted feedback from users and improve your app:
 ```py
+""" REQUESTS LIBRARY """
 import requests
 import json
 
@@ -148,6 +374,17 @@ DATA = {
 response = requests.post(PORTKEY_FEEDBACK_URL, headers=PORTKEY_HEADERS, data=json.dumps(DATA))
 
 print(response.text)
+```
+
+```bash
+curl "https://api.portkey.ai/v1/feedback" \
+  -H "x-portkey-api-key: PORTKEY_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "trace_id": "anyscale_portkey_test",
+    "value": 1,
+    "weight": 0.5
+  }'
 ```
 
 ### 4. Continuous Fine-Tuning
