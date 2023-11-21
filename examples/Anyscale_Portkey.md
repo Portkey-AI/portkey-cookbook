@@ -1,5 +1,5 @@
 # Portkey + Anyscale
-Portkey helps bring Anyscale APIs to production with its neat abstractions for observability, fallbacks, caching, and more. Use the Anyscale API through Portkey for:
+Portkey helps bring Anyscale APIs to production with its abstractions for observability, fallbacks, caching, and more. Use the Anyscale API through Portkey for:
 1. **Enhanced Logging**: Track API use with detailed insights.
 2. **Production Reliability**: Automated fallbacks, load balancing, and caching.
 3. **Continuous Improvement**: Collect and apply user feedback.
