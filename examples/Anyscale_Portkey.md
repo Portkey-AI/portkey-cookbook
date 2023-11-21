@@ -1,5 +1,5 @@
 # Portkey + Anyscale
-Portkey helps bring Anyscale APIs to production with its abstractions for observability, fallbacks, caching, and more. Use the Anyscale API through Portkey for:
+Portkey helps bring Anyscale APIs to production with its abstractions for observability, fallbacks, caching, and more. Use the Anyscale API **through** Portkey for:
 1. **Enhanced Logging**: Track API use with detailed insights.
 2. **Production Reliability**: Automated fallbacks, load balancing, and caching.
 3. **Continuous Improvement**: Collect and apply user feedback.
@@ -34,8 +34,8 @@ response = client.chat.completions.create(
 print(chat_complete.choices[0].message.content)
 ```
 ### 1.2. Enhanced Observability
-* Trace requests with single id
-* Append custom tags for in-depth analysis
+* **Trace** requests with single id.
+* **Append custom tags** for request segmenting & in-depth analysis.
 
 Just add their relevant headers to your reuqest:
 
@@ -81,9 +81,9 @@ Toggle these features through Portkey's Config builder. Head to the **[Configs t
 
 ```json
 {
-  "cache": "semantic",
-  "mode": "fallback",
-  	"options": [
+	"cache": "semantic",
+	"mode": "fallback",
+	"options": [
 		{
 			"provider": "anyscale", "api_key": "...",
 			"override_params": {"model": "meta-llama/Llama-2-7b-chat-hf"}
@@ -125,20 +125,20 @@ Gather weighted feedback from users and improve your app:
 import requests
 import json
 
-url = "https://api.portkey.ai/v1/feedback" # Portkey Feedback Endpoint
+PORTKEY_FEEDBACK_URL = "https://api.portkey.ai/v1/feedback" # Portkey Feedback Endpoint
 
-headers = {
+PORTKEY_HEADERS = {
 	"x-portkey-api-key": "PORTKEY_API_KEY",
 	"Content-Type": "application/json",
 }
 
-data = {
+DATA = {
 	"trace_id": "anyscale_portkey_test", # On Portkey, you can append feedback to a particular Trace ID
 	"value": 1,
 	"weight": 0.5
 }
 
-response = requests.post(url, headers=headers, data=json.dumps(data))
+response = requests.post(PORTKEY_FEEDBACK_URL, headers=PORTKEY_HEADERS, data=json.dumps(DATA))
 
 print(response.text)
 ```
