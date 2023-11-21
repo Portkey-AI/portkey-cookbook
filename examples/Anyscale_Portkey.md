@@ -3,9 +3,10 @@
 **Portkey** is a full-stack LLMOps platform that brings your Anyscale APIs to production with neat abstractions for observability, LLM gateway, fine-tuning, and more.
 
 ### Log your Anyscale requests
-See full logs for requests, along with their latency, cost, tokens—and dig deeper into the data with Portkey's advanced analytics suite. 
 1. Get [Portkey API Key](https://app.portkey.ai/).
 2. And switch to Portkey proxy.
+
+See full logs for requests along with their latency, cost, tokens—and dig deeper into the data with Portkey's advanced analytics suite. 
 ```py
 import requests
 
@@ -43,7 +44,7 @@ TRACE_ID = 'anyscale_portkey_test'
 METADATA = {
     "_environment": "production",
     "_user": "userid123",
-    "_organisation": "orgid123",'
+    "_organisation": "orgid123",
     "_prompt": "summarisationPrompt"
 }
 
