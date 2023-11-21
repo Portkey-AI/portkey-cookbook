@@ -157,6 +157,4 @@ Fine-tuning is currently enabled for select orgs - please request access on [Por
 
 Integrating Portkey with Anyscale helps you build resilient LLM apps from the get-go. With features like semantic caching, observability, load balancing, feedback, and fallbacks, you can ensure optimal performance and continuous improvement.
 
-[Read full Portkey docs here.](https://docs.portkey.ai/)
-
-Reach out to the Portkey team <a href="https://discord.gg/sDk9JaNfK8" target="_blank"><img src="https://img.shields.io/discord/1143393887742861333?logo=discord" alt="Discord"></a>
+[Read full Portkey docs here.](https://docs.portkey.ai/) | [Reach out to the Portkey team.](https://discord.gg/sDk9JaNfK8)
