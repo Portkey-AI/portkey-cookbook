@@ -2,10 +2,10 @@ import OpenAI from 'openai';
 
 const openai = new OpenAI({
   apiKey: "OPENAI_API_KEY",
-  baseURL: "https://api.portkey.ai/v1/proxy", // Point to Portkey's gateway URL
+  baseURL: "https://api.portkey.ai/v1", // Point to Portkey's gateway URL
   defaultHeaders:{
     "x-portkey-api-key": "PORTKEY_API_KEY",
-    "x-portkey-mode": "proxy openai",
+    "x-portkey-provider": "openai",
     "Content-Type": "application/json"
   }
 });
