@@ -2,10 +2,10 @@ from openai import OpenAI
 
 client = OpenAI(
     api_key="OPENAI_API_KEY",
-    base_url="https://api.portkey.ai/v1/proxy", ## Point to Portkey's gateway URL
+    base_url="https://api.portkey.ai/v1", ## Point to Portkey's gateway URL
     default_headers= {
         "x-portkey-api-key": "PORTKEY_API_KEY",
-        "x-portkey-mode": "proxy openai",
+        "x-portkey-provider": "openai",
         "Content-Type": "application/json"
     }
 )
