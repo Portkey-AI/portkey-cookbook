@@ -341,9 +341,7 @@ print(response.text)
 """ CURL """
 curl "https://api.portkey.ai/v1/chat/completions" \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer ANYSCALE_KEY" \
   -H "x-portkey-api-key: PORTKEY_API_KEY" \
-  -H "x-portkey-provider: anyscale" \
   -H "x-portkey-config: CONFIG_ID" \
   -d '{ "messages": [{"role": "user", "content": "Say 'Test'."}] }'
 ```
