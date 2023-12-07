@@ -273,7 +273,6 @@ PORTKEY_GATEWAY_URL = "https://api.portkey.ai/v1"
 PORTKEY_HEADERS = {
 	'Content-Type': 'application/json',
 	'x-portkey-api-key': 'PORTKEY_API_KEY',
-	'x-portkey-provider': 'anyscale',
 	# **************************************
 	'x-portkey-config': 'CONFIG_ID'
 	# **************************************
@@ -299,7 +298,6 @@ const PORTKEY_GATEWAY_URL = "https://api.portkey.ai/v1"
 const PORTKEY_HEADERS = {
 	'Content-Type': 'application/json',
 	'x-portkey-api-key': 'PORTKEY_API_KEY',
-	'x-portkey-provider': 'anyscale',
 	// **************************************
 	'x-portkey-config': 'CONFIG_ID'
 	// **************************************
