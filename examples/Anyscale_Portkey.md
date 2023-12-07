@@ -248,7 +248,7 @@ If we want to enable semantic caching + fallback from Llama2 to Mistral, your Po
 ```json
 {
 	"cache": {"mode": "semantic"},
-	"strategy": "fallback",
+	"strategy": {"mode": "fallback"},
 	"targets": [
 		{
 			"provider": "anyscale", "api_key": "...",
