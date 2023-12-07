@@ -15,14 +15,14 @@ See full logs of requests (latency, cost, tokens)—and dig deeper into the data
 """ OPENAI PYTHON SDK """
 import openai
 
-PORTKEY_GATEWAY_URL = "https://api.portkey.ai/v1/proxy"
+PORTKEY_GATEWAY_URL = "https://api.portkey.ai/v1"
 
 PORTKEY_HEADERS = {
 	'Authorization': 'Bearer ANYSCALE_KEY',
 	'Content-Type': 'application/json',
 	# **************************************
 	'x-portkey-api-key': 'PORTKEY_API_KEY', 	# Get from https://app.portkey.ai/,
-	'x-portkey-mode': 'proxy anyscale' 		# Tell Portkey that the request is for Anyscale
+	'x-portkey-provider': 'anyscale' 		# Tell Portkey that the request is for Anyscale
 	# **************************************
 }
 
@@ -39,14 +39,14 @@ print(response.choices[0].message.content)
 """ OPENAI NODE SDK """
 import OpenAI from 'openai';
 
-const PORTKEY_GATEWAY_URL = "https://api.portkey.ai/v1/proxy"
+const PORTKEY_GATEWAY_URL = "https://api.portkey.ai/v1"
 
 const PORTKEY_HEADERS = {
 	'Authorization': 'Bearer ANYSCALE_KEY',
 	'Content-Type': 'application/json',
 	// **************************************
 	'x-portkey-api-key': 'PORTKEY_API_KEY', 	// Get from https://app.portkey.ai/,
-	'x-portkey-mode': 'proxy anyscale' 		// Tell Portkey that the request is for Anyscale
+	'x-portkey-provider': 'anyscale' 		// Tell Portkey that the request is for Anyscale
 	// **************************************
 }
 
@@ -67,14 +67,14 @@ main();
 """ REQUESTS LIBRARY """
 import requests
 
-PORTKEY_GATEWAY_URL = "https://api.portkey.ai/v1/proxy/chat/completions"
+PORTKEY_GATEWAY_URL = "https://api.portkey.ai/v1/chat/completions"
 
 PORTKEY_HEADERS = {
 	'Authorization': 'Bearer ANYSCALE_KEY',
 	'Content-Type': 'application/json',
 	# **************************************
 	'x-portkey-api-key': 'PORTKEY_API_KEY', 	# Get from https://app.portkey.ai/,
-	'x-portkey-mode': 'proxy anyscale' 		# Tell Portkey that the request is for Anyscale
+	'x-portkey-provider': 'anyscale' 		# Tell Portkey that the request is for Anyscale
 	# **************************************
 }
 
@@ -90,11 +90,11 @@ print(response.text)
 
 ```bash
 """ CURL """
-curl "https://api.portkey.ai/v1/proxy/chat/completions" \
+curl "https://api.portkey.ai/v1/chat/completions" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer ANYSCALE_KEY" \
   -H "x-portkey-api-key: PORTKEY_API_KEY" \
-  -H "x-portkey-mode: proxy anyscale" \
+  -H "x-portkey-provider: anyscale" \
   -d '{
     "model": "meta-llama/Llama-2-70b-chat-hf",
     "messages": [{"role": "user", "content": "Say 'Test'."}]
@@ -111,7 +111,7 @@ Just add their relevant headers to your reuqest:
 """ OPENAI PYTHON SDK """
 import json
 
-PORTKEY_GATEWAY_URL = "https://api.portkey.ai/v1/proxy"
+PORTKEY_GATEWAY_URL = "https://api.portkey.ai/v1"
 
 TRACE_ID = 'anyscale_portkey_test'
 
@@ -126,7 +126,7 @@ PORTKEY_HEADERS = {
 	'Authorization': 'Bearer ANYSCALE_KEY',
 	'Content-Type': 'application/json',
 	'x-portkey-api-key': 'PORTKEY_API_KEY',
-	'x-portkey-mode': 'proxy anyscale',
+	'x-portkey-provider': 'anyscale',
 	# **************************************
 	'x-portkey-trace-id': TRACE_ID, 		# Send the trace id
 	'x-portkey-metadata': json.dumps(METADATA) 	# Send the metadata
@@ -147,7 +147,7 @@ print(response.choices[0].message.content)
 """ OPENAI NODE SDK """
 import OpenAI from 'openai';
 
-const PORTKEY_GATEWAY_URL = "https://api.portkey.ai/v1/proxy"
+const PORTKEY_GATEWAY_URL = "https://api.portkey.ai/v1"
 
 const TRACE_ID = 'anyscale_portkey_test'
 
@@ -162,7 +162,7 @@ const PORTKEY_HEADERS = {
 	'Authorization': 'Bearer ANYSCALE_KEY',
 	'Content-Type': 'application/json',
 	'x-portkey-api-key': 'PORTKEY_API_KEY', 	
-	'x-portkey-mode': 'proxy anyscale' 		
+	'x-portkey-provider': 'anyscale' 		
 	// **************************************
 	'x-portkey-trace-id': TRACE_ID, 		// Send the trace id
 	'x-portkey-metadata': JSON.stringify(METADATA) 	// Send the metadata
@@ -186,7 +186,7 @@ main();
 """ REQUESTS LIBRARY """
 import requests
 
-PORTKEY_GATEWAY_URL = "https://api.portkey.ai/v1/proxy/chat/completions"
+PORTKEY_GATEWAY_URL = "https://api.portkey.ai/v1/chat/completions"
 
 TRACE_ID = 'anyscale_portkey_test'
 
@@ -201,7 +201,7 @@ PORTKEY_HEADERS = {
 	'Authorization': 'Bearer ANYSCALE_KEY',
 	'Content-Type': 'application/json',
 	'x-portkey-api-key': 'PORTKEY_API_KEY',
-	'x-portkey-mode': 'proxy anyscale',
+	'x-portkey-provider': 'anyscale',
 	# **************************************
 	'x-portkey-trace-id': TRACE_ID, 		# Send the trace id
 	'x-portkey-metadata': json.dumps(METADATA) 	# Send the metadata
@@ -220,11 +220,11 @@ print(response.text)
 
 ```bash
 """ CURL """
-curl "https://api.portkey.ai/v1/proxy/chat/completions" \
+curl "https://api.portkey.ai/v1/chat/completions" \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer ANYSCALE_KEY' \
   -H 'x-portkey-api-key: PORTKEY_KEY' \
-  -H 'x-portkey-mode: proxy anyscale' \
+  -H 'x-portkey-provider: anyscale' \
   -H 'x-portkey-trace-id: TRACE_ID' \
   -H 'x-portkey-metadata: {"_environment": "production","_user": "userid123","_organisation": "orgid123","_prompt": "summarisationPrompt"}' \
   -d '{
@@ -247,9 +247,9 @@ Toggle these features by saving _Configs_ (from the Portkey dashboard > Configs 
 If we want to enable semantic caching + fallback from Llama2 to Mistral, your Portkey config would look like this:
 ```json
 {
-	"cache": "semantic",
-	"mode": "fallback",
-	"options": [
+	"cache": {"mode": "semantic"},
+	"strategy": "fallback",
+	"targets": [
 		{
 			"provider": "anyscale", "api_key": "...",
 			"override_params": {"model": "meta-llama/Llama-2-7b-chat-hf"}
@@ -262,18 +262,18 @@ If we want to enable semantic caching + fallback from Llama2 to Mistral, your Po
 }
 ```
 
-Now, just send the Config key with `x-portkey-config` header:
+Now, just send the Config ID with `x-portkey-config` header:
 
 ```py
 """ OPENAI PYTHON SDK """
-PORTKEY_GATEWAY_URL = "https://api.portkey.ai/v1/proxy"
+PORTKEY_GATEWAY_URL = "https://api.portkey.ai/v1"
 
 PORTKEY_HEADERS = {
 	'Content-Type': 'application/json',
 	'x-portkey-api-key': 'PORTKEY_API_KEY',
-	'x-portkey-mode': 'proxy anyscale',
+	'x-portkey-provider': 'anyscale',
 	# **************************************
-	'x-portkey-config': 'CONFIG_KEY'
+	'x-portkey-config': 'CONFIG_ID'
 	# **************************************
 }
 
@@ -292,14 +292,14 @@ print(response.choices[0].message.content)
 """ OPENAI NODE SDK """
 import OpenAI from 'openai';
 
-const PORTKEY_GATEWAY_URL = "https://api.portkey.ai/v1/proxy"
+const PORTKEY_GATEWAY_URL = "https://api.portkey.ai/v1"
 
 const PORTKEY_HEADERS = {
 	'Content-Type': 'application/json',
 	'x-portkey-api-key': 'PORTKEY_API_KEY',
-	'x-portkey-mode': 'proxy anyscale',
+	'x-portkey-provider': 'anyscale',
 	// **************************************
-	'x-portkey-config': 'CONFIG_KEY'
+	'x-portkey-config': 'CONFIG_ID'
 	// **************************************
 }
 
@@ -320,14 +320,14 @@ main();
 """ REQUESTS LIBRARY """
 import requests
 
-PORTKEY_GATEWAY_URL = "https://api.portkey.ai/v1/proxy/chat/completions"
+PORTKEY_GATEWAY_URL = "https://api.portkey.ai/v1/chat/completions"
 
 PORTKEY_HEADERS = {
 	'Content-Type': 'application/json',
 	'x-portkey-api-key': 'PORTKEY_API_KEY',
-	'x-portkey-mode': 'proxy anyscale',
+	'x-portkey-provider': 'anyscale',
 	# **************************************
-	'x-portkey-config': 'CONFIG_KEY'
+	'x-portkey-config': 'CONFIG_ID'
 	# **************************************
 }
 
@@ -340,16 +340,16 @@ print(response.text)
 
 ```bash
 """ CURL """
-curl "https://api.portkey.ai/v1/proxy/chat/completions" \
+curl "https://api.portkey.ai/v1/chat/completions" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer ANYSCALE_KEY" \
   -H "x-portkey-api-key: PORTKEY_API_KEY" \
-  -H "x-portkey-mode: proxy anyscale" \
-  -H "x-portkey-config: CONFIG_KEY" \
+  -H "x-portkey-provider: anyscale" \
+  -H "x-portkey-config: CONFIG_ID" \
   -d '{ "messages": [{"role": "user", "content": "Say 'Test'."}] }'
 ```
 
-For more on Configs and other gateway feature like Load Balancing, [check out the docs.](https://docs.portkey.ai/portkey-docs/portkey-features/ai-gateway)
+For more on Configs and other gateway feature like Load Balancing, [check out the docs.](https://portkey.ai/docs/product/ai-gateway-streamline-llm-integrations)
 
 ### 3. Collect Feedback
 Gather weighted feedback from users and improve your app:
@@ -400,4 +400,4 @@ Fine-tuning is currently enabled for select orgs - please request access on [Por
 
 Integrating Portkey with Anyscale helps you build resilient LLM apps from the get-go. With features like semantic caching, observability, load balancing, feedback, and fallbacks, you can ensure optimal performance and continuous improvement.
 
-[Read full Portkey docs here.](https://docs.portkey.ai/) | [Reach out to the Portkey team.](https://discord.gg/sDk9JaNfK8)
+[Read full Portkey docs here.](https://portkey.ai/docs/) | [Reach out to the Portkey team.](https://discord.gg/sDk9JaNfK8)
