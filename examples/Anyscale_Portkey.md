@@ -184,7 +184,7 @@ main();
 
 ```py
 """ REQUESTS LIBRARY """
-import requests
+import requests, json
 
 PORTKEY_GATEWAY_URL = "https://api.portkey.ai/v1/chat/completions"
 
