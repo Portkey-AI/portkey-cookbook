@@ -266,6 +266,8 @@ Now, just send the Config ID with `x-portkey-config` header:
 
 ```py
 """ OPENAI PYTHON SDK """
+import openai, json
+
 PORTKEY_GATEWAY_URL = "https://api.portkey.ai/v1"
 
 PORTKEY_HEADERS = {
