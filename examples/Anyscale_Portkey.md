@@ -109,7 +109,7 @@ Just add their relevant headers to your reuqest:
 
 ```py
 """ OPENAI PYTHON SDK """
-import json
+import json, openai
 
 PORTKEY_GATEWAY_URL = "https://api.portkey.ai/v1"
 
