@@ -2,7 +2,7 @@
 
 Portkey's Prompt Playground allows you to test and tinker with various hyperparameters without any external dependencies and deploy them to production seamlessly. Moreover, all team members can use the same prompt template, ensuring that everyone works from the same source of truth.
 
-If you feel that the prompts provided by Portkey are too much assistance and you want to use OpenAI SDK, you can use prompt templates to achieve this. Just keep following this approach throughout the cookbook.
+Right within OpenAI SDK along with Portkey APIs, you can use prompt templates to achieve this. Just keep following this approach throughout the cookbook.
 
 ## 1. Creating a Prompt Template
 
