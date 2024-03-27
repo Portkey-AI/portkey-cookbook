@@ -132,6 +132,45 @@ const response = await axios({
 console.log(response.data);
 ```
 
+#### OpenAI SDK
+
+Portkey can be used with OpenAI SDK.
+
+To send a request with using OpenAI SDK client and apply gateway configs to the request pass a `baseURL` and necessary headers as follows:
+
+```js
+import OpenAI from 'openai'; // We're using the v4 SDK
+import { PORTKEY_GATEWAY_URL, createHeaders } from 'portkey-ai';
+
+const PORTKEY_API_KEY = 'xxxxxrk';
+const CONFIG_ID = 'pc-reques-edf21c';
+
+const messages = [
+  {
+    role: 'user',
+    content: `What are the 7 wonders of the world?`
+  }
+];
+
+const openai = new OpenAI({
+  apiKey: 'OPENAI_API_KEY', // When you pass the parameter `virtualKey`, this value is ignored.
+  baseURL: PORTKEY_GATEWAY_URL,
+  defaultHeaders: createHeaders({
+    provider: 'openai',
+    apiKey: PORTKEY_API_KEY,
+    virtualKey: 'open-ai-key-04ba3e', // OpenAI virtual key
+    config: CONFIG_ID
+  })
+});
+
+const chatCompletion = await openai.chat.completions.create({
+  messages,
+  model: 'gpt-4'
+});
+
+console.log(chatCompletion.choices[0].message.content);
+```
+
 The approach to declare the Gateway Configs in the UI and reference them in the code is recommended since it keeps the Configs atomic and decoupled from the business logic and can be upgraded to add more features. What if you want to enable caching for all your thousands of requests? Just update the Configs from the UI. No commits. No redeploys.
 
 ### b. Reference Gateway Configs in the Code
@@ -210,7 +249,47 @@ const { data: response } = await axios({
 console.log(response.choices[0].message.content);
 ```
 
-Those are two ways to use Gateway Configs in your requests.
+#### OpenAI SDK
+
+```js
+import OpenAI from 'openai'; // We're using the v4 SDK
+import { PORTKEY_GATEWAY_URL, createHeaders } from 'portkey-ai';
+
+const PORTKEY_API_KEY = 'xxxxxrk';
+const CONFIG_ID = 'pc-reques-edf21c';
+
+const messages = [
+  {
+    role: 'user',
+    content: `What are the 7 wonders of the world?`
+  }
+];
+
+const openai = new OpenAI({
+  apiKey: 'OPENAI_API_KEY', // When you pass the parameter `virtualKey`, this value is ignored.
+  baseURL: PORTKEY_GATEWAY_URL,
+  defaultHeaders: createHeaders({
+    provider: 'openai',
+    apiKey: PORTKEY_API_KEY,
+    virtualKey: 'open-ai-key-04ba3e', // OpenAI virtual key
+    config: {
+      retry: {
+        attempts: 3,
+        on_status_codes: [429]
+      }
+    }
+  })
+});
+
+const chatCompletion = await openai.chat.completions.create({
+  messages,
+  model: 'gpt-4'
+});
+
+console.log(chatCompletion.choices[0].message.content);
+```
+
+Those are three ways to use Gateway Configs in your requests.
 
 In the cases where you want to specifically add a config for a specific request instead of all, Portkey allows you to pass `config` argument as seperate objects right at the time of chat completions call instead of `Portkey({..})` instantiation.
 
