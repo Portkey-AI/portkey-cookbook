@@ -4,17 +4,13 @@ Companies often face challenges of scaling their services efficiently as the tra
 
 For your AI app, rate limits are even more stringent, and if you start hitting the providers’ rate limits, there’s nothing you can do except wait to cool down and try again. With Portkey, we help you solve this very easily.
 
-How, you ask?
-
-We bring the concept of load-balancing to the LLM world and help you tackle provider rate limiting by load-balancing your requests against multiple LLM providers seamlessly — all without changing any underlying code!
-
 This cookbook will teach you how to utilize Portkey to distribute traffic across multiple LLMs, ensuring that your loadbalancer is robust by setting up backups for requests. Additionally, you will learn how to load balance across OpenAI and Anthropic, leveraging the powerful Claude-3 models recently developed by Anthropic, with Azure serving as the fallback layer.
 
 <span style="text-decoration:underline;">Prerequisites:</span>
 
 You should have the [Portkey API Key](https://portkey.ai/docs/api-reference/authentication#obtaining-your-api-key). Please sign up to obtain it. Additionally, you should have stored the OpenAI, Azure OpenAI, and Anthropic details in the [Portkey vault](https://portkey.ai/docs/product/ai-gateway-streamline-llm-integrations/virtual-keys).
 
-## 1. Importing the SDK and authenticating Portkey
+## 1. Import the SDK and authenticate Portkey
 
 Start by installing the `portkey-ai` to your NodeJS project.
 
@@ -32,7 +28,7 @@ const portkey = new Portkey({
 });
 ```
 
-## 2. Creating Configs: Loadbalance with Nested Fallbacks
+## 2. Create Configs: Loadbalance with Nested Fallbacks
 
 Portkey acts as AI gateway to all of your requests to LLMs. It follows the OpenAI SDK signature in all of it’s methods and interfaces making it easy to use and switch. Here is an example of an chat completions requests through Portkey.
 
