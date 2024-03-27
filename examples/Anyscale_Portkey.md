@@ -161,8 +161,8 @@ const METADATA = {
 const PORTKEY_HEADERS = {
 	'Authorization': 'Bearer ANYSCALE_KEY',
 	'Content-Type': 'application/json',
-	'x-portkey-api-key': 'PORTKEY_API_KEY', 	
-	'x-portkey-provider': 'anyscale', 		
+	'x-portkey-api-key': 'PORTKEY_API_KEY',
+	'x-portkey-provider': 'anyscale',
 	// **************************************
 	'x-portkey-trace-id': TRACE_ID, 		// Send the trace id
 	'x-portkey-metadata': JSON.stringify(METADATA) 	// Send the metadata
