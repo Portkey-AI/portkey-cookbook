@@ -4,10 +4,6 @@ Companies often face challenges of scaling their services efficiently as the tra
 
 For your AI app, rate limits are even more stringent, and if you start hitting the providers’ rate limits, there’s nothing you can do except wait to cool down and try again. With Portkey, we help you solve this very easily.
 
-How, you ask?
-
-We bring the concept of load-balancing to the LLM world and help you tackle provider rate limiting by load-balancing your requests against multiple LLM providers seamlessly — all without changing any underlying code!
-
 This cookbook will teach you how to utilize Portkey to distribute traffic across multiple LLMs, ensuring that your loadbalancer is robust by setting up backups for requests. Additionally, you will learn how to load balance across OpenAI and Anthropic, leveraging the powerful Claude-3 models recently developed by Anthropic, with Azure serving as the fallback layer.
 
 <span style="text-decoration:underline;">Prerequisites:</span>
