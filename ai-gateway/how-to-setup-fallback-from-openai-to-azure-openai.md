@@ -13,7 +13,7 @@ In this cookbook, we will learn how to implement a fallback mechanism in our app
 1. You have the[ Portkey API Key](https://portkey.ai/docs/api-reference/authentication#obtaining-your-api-key). ([Sign Up](https://portkey.ai))
 2. You stored OpenAI and Azure OpenAI API keys as [virtual keys](https://portkey.ai/docs/product/ai-gateway-streamline-llm-integrations/virtual-keys).
 
-## 1. Importing the SDK and authenticating with Portkey
+## 1. Import the SDK and authenticate with Portkey
 
 We start by importing Portkey SDK into our NodeJS project using npm and authenticate by passing the Portkey API Key.
 
@@ -25,7 +25,7 @@ const portkey = new Portkey({
 });
 ```
 
-## 2. Creating Fallback Configs
+## 2. Create Fallback Configs
 
 Next, we will create a configs object that influences the behavior of the request sent using Portkey.
 
@@ -74,7 +74,7 @@ Always reference the credentials from the environment variables to prevent expos
 
 > The Azure OpenAI virtual key only needs to be set up once, and it will then be accessible through Portkey in all subsequent API calls.
 
-## 3. Making a request
+## 3. Make a request
 
 All the requests will hit OpenAI since Portkey proxies all those requests to the target(s) we already specified. Notice that the changes to the requests do not demand any code changes in the business logic implementation. Smooth!
 
@@ -100,7 +100,7 @@ console.log(response.choices[0].message.content); // Here is the plan:...
 
 When OpenAI returns any 4xx or 5xx errors, Portkey will automatically switch to Azure OpenAI to ensure the same specified model is used.
 
-## 4. Seeing the Fallback Status in Logs
+## 4. View the Fallback Status in Logs
 
 Since all the requests go through Portkey, Portkey can log them for better observability of your app. You can find the specific requests by passing an _trace ID_. It can be any desired string name. In this case, `my-trace-id`
 

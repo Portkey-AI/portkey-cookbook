@@ -10,7 +10,7 @@ This cookbook will teach you how to utilize Portkey to distribute traffic across
 
 You should have the [Portkey API Key](https://portkey.ai/docs/api-reference/authentication#obtaining-your-api-key). Please sign up to obtain it. Additionally, you should have stored the OpenAI, Azure OpenAI, and Anthropic details in the [Portkey vault](https://portkey.ai/docs/product/ai-gateway-streamline-llm-integrations/virtual-keys).
 
-## 1. Importing the SDK and authenticating Portkey
+## 1. Import the SDK and authenticate Portkey
 
 Start by installing the `portkey-ai` to your NodeJS project.
 
@@ -28,7 +28,7 @@ const portkey = new Portkey({
 });
 ```
 
-## 2. Creating Configs: Loadbalance with Nested Fallbacks
+## 2. Create Configs: Loadbalance with Nested Fallbacks
 
 Portkey acts as AI gateway to all of your requests to LLMs. It follows the OpenAI SDK signature in all of it’s methods and interfaces making it easy to use and switch. Here is an example of an chat completions requests through Portkey.
 
