@@ -25,8 +25,8 @@
 
 #### Integration guides
 
-- [Anyscale and Portkey Integration Guide](./examples/Anyscale_Portkey.md)
-- [Mistral and Portkey Integration Guide](./examples/Mistral_Portkey.md)
+- [Anyscale and Portkey Integration Guide](./integrations/anyscale-portkey.md)
+- [Mistral and Portkey Integration Guide](./integrations/mistral-portkey.md)
 - [Use prompts from LangChainHub, Requests through Portkey](./integrations/how-to-use-prompts-from-langchain-hub-and-requests-through-portkey.md)
 
 #### Want to explore more?
