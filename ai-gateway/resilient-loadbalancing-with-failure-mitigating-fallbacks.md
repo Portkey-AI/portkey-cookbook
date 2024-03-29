@@ -41,7 +41,7 @@ const response = await portkey.chat.completions.create({
 
 The Portkey AI gateway can apply our desired behaviour to the requests to various LLMs. In a nutshell, our desired behaviour is the following:
 
-![Flow diagram for loadbalancing and fallbacks](./images/loadbalancing-with-fallbacks.png)
+![Flow diagram for loadbalancing and fallbacks](./images/resilient-loadbalancing-with-failure-mitigating-fallbacks/1-loadbalancing-with-fallbacks.png)
 
 Lucky for us, all of this can implemented by passing a configs allowing us to express what behavior to apply to every request through the Portkey AI gateway.
 
@@ -133,7 +133,7 @@ const response = await portkey.chat.completions.create(
 
 This trace ID can be used to filter requests from the Portkey Dashboard (>Logs) easily.
 
-![logs-request-loadbalance-fallback](./images/logs-request-loadbalance-fallback.png)
+![logs-request-loadbalance-fallback](./images/resilient-loadbalancing-with-failure-mitigating-fallbacks/2-logs-request-loadbalance-fallback.png)
 
 In addition to activating Loadbalance (icon), the logs provide essential observability information, including tokens, cost, and model.
 

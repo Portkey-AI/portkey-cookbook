@@ -65,11 +65,11 @@ To create Gateway Configs,
 
 Write the configs in the playground and click **Save Config**:
 
-![Config Builder](./images/gateway-config-builder.png)
+![Config Builder](./images/101-portkey-gateway-configs/1-gateway-config-builder.png)
 
 See the saved configs in the list along with the `ID`:
 
-![Config ID](./images/list-config-id.png)
+![Config ID](./images/101-portkey-gateway-configs/2-list-config-id.png)
 
 Try it out now!
 
