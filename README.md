@@ -32,3 +32,4 @@
 #### Want to explore more?
 
 - [101 on Portkey Gateway Configs](./product/101-portkey-gateway-configs.md)
+- [Build an article suggestion app with Supabase pgvector, and Portkey](./examples/build-an-article-suggestion-app-with-supabase-pgvector-and-portkey.md)
