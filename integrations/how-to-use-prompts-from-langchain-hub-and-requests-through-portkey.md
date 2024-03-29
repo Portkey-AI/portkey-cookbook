@@ -97,7 +97,7 @@ console.log(chatCompletion.choices[0].message.content);
 
 The prompt we used consisted of approximately 1300 tokens and cost around 5.5 cents. This information can be found on Portkey's Logs page, which provides valuable data such as the time it took for the request to be processed, dates, and a snapshot of the request headers and body.
 
-![How to Use Prompts from Lanchain Hub](./images/how-to-use-prompts-from-langchain-hub-and-requests-through-portkey.png)
+![How to Use Prompts from Lanchain Hub](./images/how-to-use-prompts-from-langchain-hub-and-requests-through-portkey/1-langchain-hub-and-requests-through-portkey.png)
 
 Read about all the observability features you get in the [docs](https://portkey.ai/docs/product/observability-modern-monitoring-for-llms).
 

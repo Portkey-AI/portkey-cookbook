@@ -8,8 +8,7 @@ To avoid such unnecessary LLM requests, you can use Portkey as your first line o
 
 All requests that have caching enabled on them will serve the subsequent responses from the Portkey’s cache.
 
-![prevent-unnecessary-llm-requests-with-the-portkey-cache
-](./images/prevent-unnecessary-llm-requests-with-the-portkey-cache.png)
+![prevent-unnecessary-llm-requests-with-the-portkey-cache](./images/prevent-unnecessary-llm-requests-with-the-portkey-cache/1-prevent-unnecessary-llm-requests-with-the-portkey-cache.png)
 
 Portkey offers two main ways of Caching techniques to enable on your requests — Simple and Semantic.
 
@@ -147,11 +146,11 @@ Explore the [docs](https://portkey.ai/docs/product/ai-gateway-streamline-llm-int
 
 On the **Analytics** page, you can find Portkey's cache performance analytics under the Cache tab.
 
-![Dasbhoard with Analytics](./images/prevent-unnecessary-llm-requests-with-the-portkey-cache-2.png)
+![Dasbhoard with Analytics](./images/prevent-unnecessary-llm-requests-with-the-portkey-cache/2-prevent-unnecessary-llm-requests-with-the-portkey-cache-2.png)
 
 The **Logs** page displays a list of LLM calls that served responses from cache. The corresponding icon is activated when the cache is hit.
 
-![Dashboard with Logs](./images/prevent-unnecessary-llm-requests-with-the-portkey-cache-3.png)
+![Dashboard with Logs](./images/prevent-unnecessary-llm-requests-with-the-portkey-cache/3-prevent-unnecessary-llm-requests-with-the-portkey-cache-3.png)
 
 ## Next steps
 
