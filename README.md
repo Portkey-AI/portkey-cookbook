@@ -23,12 +23,12 @@
 - [Prevent unnecessary LLM requests with the Portkey Cache](./ai-gateway/prevent-unnecessary-llm-requests-with-the-portkey-cache.md)
 - [Set up Fallback from Stable Diffusion to Dall-E](./ai-gateway/set-up-fallback-from-stable-diffusion-to-dall-e.ipynb) (_Python_)
 
-#### Product guides
-
-- [101 on Portkey Gateway Configs](./product/101-portkey-gateway-configs.md)
-
 #### Integration guides
 
 - [Anyscale and Portkey Integration Guide](./examples/Anyscale_Portkey.md)
 - [Mistral and Portkey Integration Guide](./examples/Mistral_Portkey.md)
 - [Use prompts from LangChainHub, Requests through Portkey](./integrations/how-to-use-prompts-from-langchain-hub-and-requests-through-portkey.md)
+
+#### Want to explore more?
+
+- [101 on Portkey Gateway Configs](./product/101-portkey-gateway-configs.md)
