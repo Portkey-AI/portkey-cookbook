@@ -4,9 +4,12 @@
   </a>
   <br>
   <p>
-     <i>Repository of resources to learn how to use Portkey for LLMOps</i>
+     <b>Repository of resources to learn how to use Portkey for LLMOps</b>
+     <br>
   </p>
 </div>
+
+<i> Resources focus on <b>how to use those features and why they matter</b> rather than what they are and how they work. Are you interested in the latter? Visit <a href="https://portkey.ai/docs">portkey documentation</a>.</i>
 
 ---
 
