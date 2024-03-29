@@ -93,7 +93,7 @@ To create a prompt template:
 
 1. Login into Portkey Dashboard
 2. Navigate to **Prompts**
-   1. Click **Create **to open prompt creation page
+   1. Click **Create** to open prompt creation page
 
 The following page should open:
 

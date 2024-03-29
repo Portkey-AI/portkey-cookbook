@@ -16,8 +16,8 @@
 #### Cookbooks
 
 - [How to generate images using Portkey AI gateway](./examples/image-generation.ipynb) (_Python_)
-- [Setting up resilient Load balancers with failure-mitigating Fallbacks](./ai-gateway/resilient-loadbalancing-with-failure-mitigating-fallbacks.md)
-- [How to setup fallback from OpenAI to Azure OpenAI](./ai-gateway/how-to-setup-fallback-from-openai-to-azure-openai.md)
+- [Setting up resilient Load balancers with failure-mitigating Fallbacks](./ai-gateway/resilient-loadbalancing-with-failure-mitigating-fallbacks.md) [ [+ See Python Notebook](./ai-gateway/resilient_loadbalancing_with_failure_mitigating_fallbacks.ipynb) ]
+- [How to setup fallback from OpenAI to Azure OpenAI](./ai-gateway/how-to-setup-fallback-from-openai-to-azure-openai.md) [ [ + See Python Notebook](./ai-gateway/how_to_setup_fallback_from_openai_to_azure_openai.ipynb) ]
 - [Automatically retry requests to LLMs](./ai-gateway/automatically-retry-requests-to-llms.md)
 - [How to use OpenAI SDK with Portkey Prompt Templates](./ai-gateway/how-to-use-openai-sdk-with-portkey-prompt-templates.md)
 - [Prevent unnecessary LLM requests with the Portkey Cache](./ai-gateway/prevent-unnecessary-llm-requests-with-the-portkey-cache.md)
@@ -32,5 +32,5 @@
 
 #### Want to explore more?
 
-- [101 on Portkey Gateway Configs](./product/101-portkey-gateway-configs.md) [ [See Python Notebook](./product/101_portkey_gateway_configs.ipynb) ]
+- [101 on Portkey Gateway Configs](./product/101-portkey-gateway-configs.md) [ [+ See Python Notebook](./product/101_portkey_gateway_configs.ipynb) ]
 - [Build an article suggestion app with Supabase pgvector, and Portkey](./examples/build-an-article-suggestion-app-with-supabase-pgvector-and-portkey.md)
