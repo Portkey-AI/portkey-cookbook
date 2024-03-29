@@ -22,6 +22,7 @@
 - [How to use OpenAI SDK with Portkey Prompt Templates](./ai-gateway/how-to-use-openai-sdk-with-portkey-prompt-templates.md)
 - [Prevent unnecessary LLM requests with the Portkey Cache](./ai-gateway/prevent-unnecessary-llm-requests-with-the-portkey-cache.md)
 - [Set up Fallback from Stable Diffusion to Dall-E](./ai-gateway/set-up-fallback-from-stable-diffusion-to-dall-e.ipynb) (_Python_)
+- [Smart Fallback with Model-Optimized Prompts](./ai-gateway/smart-fallback-with-model-optimized-prompts.md)
 
 #### Integration guides
 
