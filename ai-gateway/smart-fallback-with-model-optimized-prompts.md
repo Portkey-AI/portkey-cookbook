@@ -2,7 +2,7 @@
 
 Portkey can help you easily create fallbacks from one LLM to another, making your application more reliable. While Fallback ensures reliability, it also means that you'll be running a prompt optimized for one LLM on another, which can often lead to significant differences in the final output.
 
-Using Portkey Prompt templates that you can optimize for each model will ensure the final output does not have major differences, even if different models (in the fallback chain) respond to your app.
+Using Portkey Prompt templates you can optimize for specific models and ensure the final output is best optimised for the use-case, even if there are different models (in the fallback chain).
 
 In this cookbook, we will explore setting up fallbacks between model-optimized prompt templates instead of using the same prompt for different models.
 
