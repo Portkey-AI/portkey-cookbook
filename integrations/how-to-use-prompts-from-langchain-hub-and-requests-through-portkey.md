@@ -27,8 +27,8 @@ Since we expect to use Portkey to make API calls, let’s instantiate and authen
 
 ```js
 const portkey = new Portkey({
-  apiKey: 'xxtrk',
-  virtualKey: 'main-xwxxxf4d'
+  apiKey: '<YOUR_PORTKEY_API_KEY_HERE>',
+  virtualKey: '<YOUR_OPENAI_VIRTUAL_KEY_HERE>'
 });
 ```
 
