@@ -48,17 +48,7 @@ I want to become fit in 6 months
 <p>
 2. Set specific fitness goals (like weight loss, strength, etc).
 <p>
-3. Hire a personal trainer or find reliable fitness resources.
-<p>
-4. Create a weekly workout schedule.
-<p>
-5. Adopt a balanced, nutritious eating plan.
-<p>
-6. Incorporate daily physical activities, like walking or cycling.
-<p>
-7. Monitor progress with weekly check-ins on goals.
-<p>
-8. Get regular, adequate sleep for recovery.
+...
 <p>
 9. Stay hydrated and make adjustments as required.
    </td>
@@ -70,9 +60,7 @@ Here are some suggested subtasks to help you achieve six-pack abs in six months:
 <p>
 2. Create a sustainable calorie deficit by tracking your daily food intake and ensuring you burn more calories than you consume.
 <p>
-….
-<p>
-…
+...
 <p>
 9. Stay motivated by setting short-term goals, rewarding yourself for progress, and seeking support from friends, family, or a fitness coach.
    </td>
