@@ -1,16 +1,20 @@
 # Portkey + Anyscale
+
 Portkey helps bring Anyscale APIs to production with its abstractions for observability, fallbacks, caching, and more. Use the Anyscale API **through** Portkey for:
+
 1. **Enhanced Logging**: Track API usage with detailed insights.
 2. **Production Reliability**: Automated fallbacks, load balancing, and caching.
 3. **Continuous Improvement**: Collect and apply user feedback.
 4. **Enhanced Fine-Tuning**: Combine logs & user feedback for targetted fine-tuning.
 
 ### 1.1 Setup & Logging
+
 1. Set `$ export OPENAI_API_KEY=ANYSCALE_API_KEY`
 2. Obtain your [**Portkey API Key**](https://app.portkey.ai/).
 3. Switch to **Portkey Gateway URL:** `https://api.portkey.ai/v1/proxy`
 
 See full logs of requests (latency, cost, tokens)—and dig deeper into the data with their analytics suite.
+
 ```py
 """ OPENAI PYTHON SDK """
 import openai
@@ -35,6 +39,7 @@ response = client.chat.completions.create(
 
 print(response.choices[0].message.content)
 ```
+
 ```javascript
 """ OPENAI NODE SDK """
 import OpenAI from 'openai';
@@ -102,8 +107,9 @@ curl "https://api.portkey.ai/v1/chat/completions" \
 ```
 
 ### 1.2. Enhanced Observability
-* **Trace** requests with single id.
-* **Append custom tags** for request segmenting & in-depth analysis.
+
+- **Trace** requests with single id.
+- **Append custom tags** for request segmenting & in-depth analysis.
 
 Just add their relevant headers to your reuqest:
 
@@ -238,27 +244,31 @@ Here’s how your logs will appear on your Portkey dashboard:
 <img src="https://portkey.ai/blog/content/images/2023/11/logsgif.gif" />
 
 ### 2. Caching, Fallbacks, Load Balancing
-* **Fallbacks**: Ensure your application remains functional even if a primary service fails.
-* **Load Balancing**: Efficiently distribute incoming requests among multiple models.
-* **Semantic Caching**: Reduce costs and latency by intelligently caching results.
+
+- **Fallbacks**: Ensure your application remains functional even if a primary service fails.
+- **Load Balancing**: Efficiently distribute incoming requests among multiple models.
+- **Semantic Caching**: Reduce costs and latency by intelligently caching results.
 
 Toggle these features by saving _Configs_ (from the Portkey dashboard > Configs tab).
 
 If we want to enable semantic caching + fallback from Llama2 to Mistral, your Portkey config would look like this:
+
 ```json
 {
-	"cache": {"mode": "semantic"},
-	"strategy": {"mode": "fallback"},
-	"targets": [
-		{
-			"provider": "anyscale", "api_key": "...",
-			"override_params": {"model": "meta-llama/Llama-2-7b-chat-hf"}
-		},
-		{
-			"provider": "anyscale", "api_key": "...",
-			"override_params": {"model": "mistralai/Mistral-7B-Instruct-v0.1"}
-		}
-	]
+  "cache": { "mode": "semantic" },
+  "strategy": { "mode": "fallback" },
+  "targets": [
+    {
+      "provider": "anyscale",
+      "api_key": "...",
+      "override_params": { "model": "meta-llama/Llama-2-7b-chat-hf" }
+    },
+    {
+      "provider": "anyscale",
+      "api_key": "...",
+      "override_params": { "model": "mistralai/Mistral-7B-Instruct-v0.1" }
+    }
+  ]
 }
 ```
 
@@ -287,7 +297,6 @@ response = client.chat.completions.create(
 
 print(response.choices[0].message.content)
 ```
-
 
 ```javascript
 """ OPENAI NODE SDK """
@@ -349,7 +358,9 @@ curl "https://api.portkey.ai/v1/chat/completions" \
 For more on Configs and other gateway feature like Load Balancing, [check out the docs.](https://portkey.ai/docs/product/ai-gateway-streamline-llm-integrations)
 
 ### 3. Collect Feedback
+
 Gather weighted feedback from users and improve your app:
+
 ```py
 """ REQUESTS LIBRARY """
 import requests

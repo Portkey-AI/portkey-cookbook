@@ -17,7 +17,7 @@ To do this:
 
 Spend some time playing around with different prompt inputs and changing the hyperparameters. The following settings seemed most suitable and generated a story that met expectations.
 
-![Prompt Logs Page](./images/1-openai-sdk-with-prompt-templates.png)
+![Prompt Logs Page](./images/how-to-use-openai-sdk-with-portkey-prompt-templates/1-openai-sdk-with-prompt-templates.png)
 
 The list of parameters in my prompt template:
 

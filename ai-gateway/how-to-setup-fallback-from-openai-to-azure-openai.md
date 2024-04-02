@@ -31,15 +31,15 @@ Next, we will create a configs object that influences the behavior of the reques
 
 ```js
 {
- strategy: {
-    mode: "fallback",
+ 'strategy': {
+    'mode': "fallback",
   },
-  targets: [
+  'targets': [
     {
-      virtual_key: process.env.OPENAI_VIRTUAL_KEY,
+      'virtual_key': process.env.OPENAI_VIRTUAL_KEY,
     },
     {
-      virtual_key: process.env.AZURE_OPENAI_VIRTUAL_KEY,
+      'virtual_key': process.env.AZURE_OPENAI_VIRTUAL_KEY,
     },
   ],
 }
