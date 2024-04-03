@@ -2,7 +2,7 @@
 
 Portkey can help you easily create fallbacks from one LLM to another, making your application more reliable. While Fallback ensures reliability, it also means that you'll be running a prompt optimized for one LLM on another, which can often lead to significant differences in the final output.
 
-Using Portkey Prompt templates that you can optimize for each model will ensure the final output does not have major differences, even if different models (in the fallback chain) respond to your app.
+Using Portkey Prompt templates you can optimize for specific models and ensure the final output is best optimised for the use-case, even if there are different models (in the fallback chain).
 
 In this cookbook, we will explore setting up fallbacks between model-optimized prompt templates instead of using the same prompt for different models.
 
@@ -48,17 +48,7 @@ I want to become fit in 6 months
 <p>
 2. Set specific fitness goals (like weight loss, strength, etc).
 <p>
-3. Hire a personal trainer or find reliable fitness resources.
-<p>
-4. Create a weekly workout schedule.
-<p>
-5. Adopt a balanced, nutritious eating plan.
-<p>
-6. Incorporate daily physical activities, like walking or cycling.
-<p>
-7. Monitor progress with weekly check-ins on goals.
-<p>
-8. Get regular, adequate sleep for recovery.
+...
 <p>
 9. Stay hydrated and make adjustments as required.
    </td>
@@ -70,9 +60,7 @@ Here are some suggested subtasks to help you achieve six-pack abs in six months:
 <p>
 2. Create a sustainable calorie deficit by tracking your daily food intake and ensuring you burn more calories than you consume.
 <p>
-….
-<p>
-…
+...
 <p>
 9. Stay motivated by setting short-term goals, rewarding yourself for progress, and seeking support from friends, family, or a fitness coach.
    </td>
@@ -99,13 +87,13 @@ The following page should open:
 
 ![alt text](./images/smart-fallback-with-model-optimized-prompts/1-smart-fallback-with-model-optimized-prompts.png)
 
-I am using Anthopic’s `claude-3-opus-20240229` model with an prompt to instruct it to generate sub-tasks for an user’s goal. You can declare an variable using moustace syntax to tell Portkey to substitute an value when prompt is triggered. For example, `{{goal}}` is substituted with “I want to earn six packs in six months” in the playground.
+I am using Anthopic’s `claude-3-opus-20240229` model to instruct it to generate sub-tasks for an user’s goal. You can declare an variable using moustache syntax to substitute an value when prompt is triggered. For example, `{{goal}}` is substituted with “I want to earn six packs in six months” in the playground.
 
 Now, create another prompt template that can act as a fallback.
 
 ![alt text](./images/smart-fallback-with-model-optimized-prompts/2-smart-fallback-with-model-optimized-prompts.png)
 
-You can create the same prompt this time but use a different model, such as `gpt-4`. You have created two prompt templates and two different Prompt IDs by now. You must have noticed each prompt has a slightly different `system` message based on the model. After experimenting with each model, the above prompt was best suited for suggesting actionable steps to reach the goal.
+You can create the same prompt this time but use a different model, such as `gpt-4`. You have created two prompt templates by now. You must have noticed each prompt has a slightly different `system` message based on the model. After experimenting with each model, the above prompt was best suited for suggesting actionable steps to reach the goal.
 
 The models on this page require you to save OpenAI and Anthropic API keys to the Portkey Vault. For more information about Portkey Vault, [read more on Virtual Keys](https://portkey.ai/docs/product/ai-gateway-streamline-llm-integrations/virtual-keys#creating-virtual-keys).
 
@@ -113,7 +101,7 @@ For further exploration, [Try learning about OpenAI SDK to work with Prompt Temp
 
 ## Fallback Configs using Prompt Templates
 
-You need to prepare requests for them to acquire the fallback strategy. To do that, use the created prompt templates earlier, one with Anthropic and another with OpenAI, structure them as follows:
+You need to prepare requests to apply fallback strategy. To do that, use the created prompt templates earlier, one with Anthropic and another with OpenAI, structure them as follows:
 
 ```json
 {
@@ -131,7 +119,7 @@ You need to prepare requests for them to acquire the fallback strategy. To do th
 }
 ```
 
-The `targets` is an array of objects ordered by preference in favor of _Anthropic_ and then on to _OpenAI_. The Prompt IDs generated after prompt templates are created are now used to reference in these Gateway Configs.
+The `targets` is an array of objects ordered by preference in favor of _Anthropic_ and then on to _OpenAI_.
 
 Pass these `config`s at instance creation from Portkey
 
