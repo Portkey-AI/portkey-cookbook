@@ -7,72 +7,43 @@ Created by [Portkey](https://portkey.ai/)'s commmunity of 🏗️ Practitioners 
 
 <a href="https://discord.gg/sDk9JaNfK8" target="_blank"><img src="https://img.shields.io/discord/1143393887742861333?logo=discord" alt="Discord" height=25></a>
 
-<details>
+### End-to-End Apps built on top of Portkey
+| | |
+| :- | :- |
+| [Title](/) | <img src="https://img.shields.io/badge/OpenAI-firebrick" height=20> <img src="https://img.shields.io/badge/Supabase-blue" height=20> <img src="https://img.shields.io/badge/Postgres-darkgreen" height=20> |
 
-<summary><p style="font-weight: bold;font-size:1.4em;">End-to-End Apps built on top of Portkey</a></summary>
+### LLM Provider Examples & Cookbooks
 
 | | |
 | :- | :- |
 | [Title](/) | <img src="https://img.shields.io/badge/OpenAI-firebrick" height=20> <img src="https://img.shields.io/badge/Supabase-blue" height=20> <img src="https://img.shields.io/badge/Postgres-darkgreen" height=20> |
 
-</details>
-
-<details>
-
-<summary><p style="font-weight: bold;font-size:1.4em;">LLM Provider Examples & Cookbooks</a></summary>
+### Monitoring, Tracing, Analytics
 
 | | |
 | :- | :- |
 | [Title](/) | <img src="https://img.shields.io/badge/OpenAI-firebrick" height=20> <img src="https://img.shields.io/badge/Supabase-blue" height=20> <img src="https://img.shields.io/badge/Postgres-darkgreen" height=20> |
 
-</details>
-
-<details>
-
-<summary><p style="font-weight: bold;font-size:1.4em;">Monitoring, Tracing, Analytics</a></summary>
+### Continuous Improvement with User Feedback
 
 | | |
 | :- | :- |
 | [Title](/) | <img src="https://img.shields.io/badge/OpenAI-firebrick" height=20> <img src="https://img.shields.io/badge/Supabase-blue" height=20> <img src="https://img.shields.io/badge/Postgres-darkgreen" height=20> |
 
-</details>
-
-<details>
-
-<summary><p style="font-weight: bold;font-size:1.4em;">Continuous Improvement with User Feedback</a></summary>
+### Testing & Experimentation
 
 | | |
 | :- | :- |
 | [Title](/) | <img src="https://img.shields.io/badge/OpenAI-firebrick" height=20> <img src="https://img.shields.io/badge/Supabase-blue" height=20> <img src="https://img.shields.io/badge/Postgres-darkgreen" height=20> |
 
-</details>
-
-<details>
-
-<summary><p style="font-weight: bold;font-size:1.4em;">Testing & Experimentation</a></summary>
+### Solving for Reliability & Caching
 
 | | |
 | :- | :- |
 | [Title](/) | <img src="https://img.shields.io/badge/OpenAI-firebrick" height=20> <img src="https://img.shields.io/badge/Supabase-blue" height=20> <img src="https://img.shields.io/badge/Postgres-darkgreen" height=20> |
 
-</details>
-
-<details>
-
-<summary><p style="font-weight: bold;font-size:1.4em;">Solving for Reliability & Caching</a></summary>
+### Managing Prompts
 
 | | |
 | :- | :- |
 | [Title](/) | <img src="https://img.shields.io/badge/OpenAI-firebrick" height=20> <img src="https://img.shields.io/badge/Supabase-blue" height=20> <img src="https://img.shields.io/badge/Postgres-darkgreen" height=20> |
-
-</details>
-
-<details>
-
-<summary><p style="font-weight: bold;font-size:1.4em;">Managing Prompts</a></summary>
-
-| | |
-| :- | :- |
-| [Title](/) | <img src="https://img.shields.io/badge/OpenAI-firebrick" height=20> <img src="https://img.shields.io/badge/Supabase-blue" height=20> <img src="https://img.shields.io/badge/Postgres-darkgreen" height=20> |
-
-</details>
