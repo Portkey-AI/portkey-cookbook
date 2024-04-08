@@ -7,43 +7,43 @@ Created by [Portkey](https://portkey.ai/)'s commmunity of 🏗️ Practitioners 
 
 <a href="https://discord.gg/sDk9JaNfK8" target="_blank"><img src="https://img.shields.io/discord/1143393887742861333?logo=discord" alt="Discord" height=25></a>
 
-### End-to-End Apps
+### 1. End-to-End Apps
 
 | Cookbook | Language | Tags |
 | :- | :- | :- |
 | [Title](/) | | <img src="https://img.shields.io/badge/OpenAI-firebrick" height=20> <img src="https://img.shields.io/badge/Supabase-blue" height=20> <img src="https://img.shields.io/badge/Postgres-darkgreen" height=20> |
 
-### LLM Provider Examples & Cookbooks
+### 2. LLM Provider Examples
 
 | Cookbook | Python | Node | Tags |
 | :- | :- | :- | :- |
 | [Title](/) | | | <img src="https://img.shields.io/badge/OpenAI-firebrick" height=20> <img src="https://img.shields.io/badge/Supabase-blue" height=20> <img src="https://img.shields.io/badge/Postgres-darkgreen" height=20> |
 
-### Monitoring, Tracing, Analytics
+### 3. Monitoring, Tracing, Analytics
 
 | Cookbook | Python | Node | Tags |
 | :- | :- | :- | :- |
 | [Title](/) | | | <img src="https://img.shields.io/badge/OpenAI-firebrick" height=20> <img src="https://img.shields.io/badge/Supabase-blue" height=20> <img src="https://img.shields.io/badge/Postgres-darkgreen" height=20> |
 
-### Continuous Improvement with User Feedback
+### 4. Improving with User Feedback
 
 | Cookbook | Python | Node | Tags |
 | :- | :- | :- | :- |
 | [Title](/) | | | <img src="https://img.shields.io/badge/OpenAI-firebrick" height=20> <img src="https://img.shields.io/badge/Supabase-blue" height=20> <img src="https://img.shields.io/badge/Postgres-darkgreen" height=20> |
 
-### Testing & Experimentation
+### 5. Testing & Experimentation
 
 | Cookbook | Python | Node | Tags |
 | :- | :- | :- | :- |
 | [Title](/) | | | <img src="https://img.shields.io/badge/OpenAI-firebrick" height=20> <img src="https://img.shields.io/badge/Supabase-blue" height=20> <img src="https://img.shields.io/badge/Postgres-darkgreen" height=20> |
 
-### Solving for Reliability & Caching
+### 6. Reliability & Caching
 
 | Cookbook | Python | Node | Tags |
 | :- | :- | :- | :- |
 | [Title](/) | | | <img src="https://img.shields.io/badge/OpenAI-firebrick" height=20> <img src="https://img.shields.io/badge/Supabase-blue" height=20> <img src="https://img.shields.io/badge/Postgres-darkgreen" height=20> |
 
-### Managing Prompts
+### 7. Managing Prompts
 
 | Cookbook | Python | Node | Tags |
 | :- | :- | :- | :- |
