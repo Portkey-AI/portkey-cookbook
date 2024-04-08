@@ -1,36 +1,78 @@
-<div align="right">
-  <a href="#">
-  	<img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy-downsized.gif" alt="Logo project" height="80" />
-  </a>
-  <br>
-  <p>
-     <b>Repository of resources to learn how to use Portkey for LLMOps</b>
-     <br>
-  </p>
-</div>
+# Portkey Practitioners' Cookbooks
+![header](../images/header.png)
 
-<i> Resources focus on <b>how to use those features and why they matter</b> rather than what they are and how they work. Are you interested in the latter? Visit <a href="https://portkey.ai/docs">portkey documentation</a>.</i>
+### Curated and Open Source cookbooks with strategies, tactics, and code for tackling the **production challenges** of LLMs
 
----
+Created by [Portkey](https://portkey.ai/)'s commmunity of 🏗️ Practitioners who are building and scaling production-grade LLM apps.
 
-#### Cookbooks
+<a href="https://discord.gg/sDk9JaNfK8" target="_blank"><img src="https://img.shields.io/discord/1143393887742861333?logo=discord" alt="Discord" height=25></a>
 
-- [How to generate images using Portkey AI gateway](./examples/image-generation.ipynb) (_Python_)
-- [Setting up resilient Load balancers with failure-mitigating Fallbacks](./ai-gateway/resilient-loadbalancing-with-failure-mitigating-fallbacks.md) [ [+ See Python Notebook](./ai-gateway/resilient_loadbalancing_with_failure_mitigating_fallbacks.ipynb) ]
-- [How to setup fallback from OpenAI to Azure OpenAI](./ai-gateway/how-to-setup-fallback-from-openai-to-azure-openai.md) [ [ + See Python Notebook](./ai-gateway/how_to_setup_fallback_from_openai_to_azure_openai.ipynb) ]
-- [Automatically retry requests to LLMs](./ai-gateway/automatically-retry-requests-to-llms.md)
-- [How to use OpenAI SDK with Portkey Prompt Templates](./ai-gateway/how-to-use-openai-sdk-with-portkey-prompt-templates.md)
-- [Prevent unnecessary LLM requests with the Portkey Cache](./ai-gateway/prevent-unnecessary-llm-requests-with-the-portkey-cache.md)
-- [Set up Fallback from Stable Diffusion to Dall-E](./ai-gateway/set-up-fallback-from-stable-diffusion-to-dall-e.ipynb) (_Python_)
-- [Smart Fallback with Model-Optimized Prompts](./ai-gateway/smart-fallback-with-model-optimized-prompts.md)
+<details>
 
-#### Integration guides
+<summary><p style="font-weight: bold;font-size:1.4em;">End-to-End Apps built on top of Portkey</a></summary>
 
-- [Anyscale and Portkey Integration Guide](./integrations/anyscale-portkey.md)
-- [Mistral and Portkey Integration Guide](./integrations/mistral-portkey.md)
-- [Use prompts from LangChainHub, Requests through Portkey](./integrations/how-to-use-prompts-from-langchain-hub-and-requests-through-portkey.md)
+| | |
+| :- | :- |
+| [Title](/) | <img src="https://img.shields.io/badge/OpenAI-firebrick" height=20> <img src="https://img.shields.io/badge/Supabase-blue" height=20> <img src="https://img.shields.io/badge/Postgres-darkgreen" height=20> |
 
-#### Want to explore more?
+</details>
 
-- [101 on Portkey Gateway Configs](./product/101-portkey-gateway-configs.md) [ [+ See Python Notebook](./product/101_portkey_gateway_configs.ipynb) ]
-- [Build an article suggestion app with Supabase pgvector, and Portkey](./examples/build-an-article-suggestion-app-with-supabase-pgvector-and-portkey.md)
+<details>
+
+<summary><p style="font-weight: bold;font-size:1.4em;">LLM Provider Examples & Cookbooks</a></summary>
+
+| | |
+| :- | :- |
+| [Title](/) | <img src="https://img.shields.io/badge/OpenAI-firebrick" height=20> <img src="https://img.shields.io/badge/Supabase-blue" height=20> <img src="https://img.shields.io/badge/Postgres-darkgreen" height=20> |
+
+</details>
+
+<details>
+
+<summary><p style="font-weight: bold;font-size:1.4em;">Monitoring, Tracing, Analytics</a></summary>
+
+| | |
+| :- | :- |
+| [Title](/) | <img src="https://img.shields.io/badge/OpenAI-firebrick" height=20> <img src="https://img.shields.io/badge/Supabase-blue" height=20> <img src="https://img.shields.io/badge/Postgres-darkgreen" height=20> |
+
+</details>
+
+<details>
+
+<summary><p style="font-weight: bold;font-size:1.4em;">Continuous Improvement with User Feedback</a></summary>
+
+| | |
+| :- | :- |
+| [Title](/) | <img src="https://img.shields.io/badge/OpenAI-firebrick" height=20> <img src="https://img.shields.io/badge/Supabase-blue" height=20> <img src="https://img.shields.io/badge/Postgres-darkgreen" height=20> |
+
+</details>
+
+<details>
+
+<summary><p style="font-weight: bold;font-size:1.4em;">Testing & Experimentation</a></summary>
+
+| | |
+| :- | :- |
+| [Title](/) | <img src="https://img.shields.io/badge/OpenAI-firebrick" height=20> <img src="https://img.shields.io/badge/Supabase-blue" height=20> <img src="https://img.shields.io/badge/Postgres-darkgreen" height=20> |
+
+</details>
+
+<details>
+
+<summary><p style="font-weight: bold;font-size:1.4em;">Solving for Reliability & Caching</a></summary>
+
+| | |
+| :- | :- |
+| [Title](/) | <img src="https://img.shields.io/badge/OpenAI-firebrick" height=20> <img src="https://img.shields.io/badge/Supabase-blue" height=20> <img src="https://img.shields.io/badge/Postgres-darkgreen" height=20> |
+
+</details>
+
+<details>
+
+<summary><p style="font-weight: bold;font-size:1.4em;">Managing Prompts</a></summary>
+
+| | |
+| :- | :- |
+| [Title](/) | <img src="https://img.shields.io/badge/OpenAI-firebrick" height=20> <img src="https://img.shields.io/badge/Supabase-blue" height=20> <img src="https://img.shields.io/badge/Postgres-darkgreen" height=20> |
+
+</details>
