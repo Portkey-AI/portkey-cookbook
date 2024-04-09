@@ -5,7 +5,7 @@
 
 Created by [Portkey](https://portkey.ai/)'s commmunity of 🏗️ Practitioners who are building and scaling production-grade LLM apps.
 
-<a href="https://discord.gg/sDk9JaNfK8" target="_blank"><img src="https://img.shields.io/discord/1143393887742861333?logo=discord" alt="Discord" height=22></a>
+<a href="https://discord.gg/sDk9JaNfK8" target="_blank"><img src="https://img.shields.io/discord/1143393887742861333?logo=discord" alt="Discord" height=20></a>
 
 ### Frameworks and Provider Examples
 
