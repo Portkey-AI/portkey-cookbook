@@ -13,32 +13,32 @@ Created by [Portkey](https://portkey.ai/)'s commmunity of 🏗️ Practitioners 
 | :- | :- | :- |
 | [Title](/) | | <img src="https://img.shields.io/badge/OpenAI-firebrick" height=20> <img src="https://img.shields.io/badge/Supabase-blue" height=20> <img src="https://img.shields.io/badge/Postgres-darkgreen" height=20> |
 
-## Providers & Frameworks
+## Providers and Frameworks
 
 | Cookbook | Python | Node |
 | :- | :- | :- | 
 | [Stability AI](/) | HERE | HERE | 
 | [Vercel AI](/) | - | HERE | 
 
-## Monitoring, Tracing, Analytics
+## Monitoring and Analytics
 
 | Cookbook | Python | Node | Tags |
 | :- | :- | :- | :- |
 | [Title](/) | | | <img src="https://img.shields.io/badge/OpenAI-firebrick" height=20> <img src="https://img.shields.io/badge/Supabase-blue" height=20> <img src="https://img.shields.io/badge/Postgres-darkgreen" height=20> |
 
-## Tests, Experiments, Using Feedback
+## Improving with User Feedback and Experimentation
 
 | Cookbook | Python | Node | Tags |
 | :- | :- | :- | :- |
 | [Title](/) | | | <img src="https://img.shields.io/badge/OpenAI-firebrick" height=20> <img src="https://img.shields.io/badge/Supabase-blue" height=20> <img src="https://img.shields.io/badge/Postgres-darkgreen" height=20> |
 
-## Reliability Challenges & Caching
+## Reliability Challenges and Caching
 
 | Cookbook | Python | Node | Tags |
 | :- | :- | :- | :- |
 | [Title](/) | | | <img src="https://img.shields.io/badge/OpenAI-firebrick" height=20> <img src="https://img.shields.io/badge/Supabase-blue" height=20> <img src="https://img.shields.io/badge/Postgres-darkgreen" height=20> |
 
-## Managing & Deploying Prompts
+## Managing and Deploying Prompts
 
 | Cookbook | Python | Node | Tags |
 | :- | :- | :- | :- |
