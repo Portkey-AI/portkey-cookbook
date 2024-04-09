@@ -11,7 +11,7 @@ Created by [Portkey](https://portkey.ai/)'s commmunity of 🏗️ Practitioners 
 
 | Cookbook | Python | Node | Tags |
 | :- | :- | :- | :- |
-| [Stability AI](/) | HERE | HERE | <img src="https://img.shields.io/badge/OpenAI-firebrick" height=20> <img src="https://img.shields.io/badge/Supabase-blue" height=20> <img src="https://img.shields.io/badge/Postgres-darkgreen" height=20> |
+| [Stability AI](/) | HERE | HERE | `openai`, `supabase`, `postgres` |
 | [Vercel AI](/) | - | HERE | <img src="https://img.shields.io/badge/OpenAI-firebrick" height=20> <img src="https://img.shields.io/badge/Supabase-blue" height=20> <img src="https://img.shields.io/badge/Postgres-darkgreen" height=20> |
 
 ## Debugging and Analysing LLM Requests
