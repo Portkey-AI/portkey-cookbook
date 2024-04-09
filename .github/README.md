@@ -7,20 +7,14 @@ Created by [Portkey](https://portkey.ai/)'s commmunity of 🏗️ Practitioners 
 
 <a href="https://discord.gg/sDk9JaNfK8" target="_blank"><img src="https://img.shields.io/discord/1143393887742861333?logo=discord" alt="Discord" height=22></a>
 
-## End-to-End Apps
+## Frameworks and Provider Examples
 
-| Cookbook | Language | Tags |
-| :- | :- | :- |
-| [Title](/) | | <img src="https://img.shields.io/badge/OpenAI-firebrick" height=20> <img src="https://img.shields.io/badge/Supabase-blue" height=20> <img src="https://img.shields.io/badge/Postgres-darkgreen" height=20> |
+| Cookbook | Python | Node | Tags |
+| :- | :- | :- | :- |
+| [Stability AI](/) | HERE | HERE | <img src="https://img.shields.io/badge/OpenAI-firebrick" height=20> <img src="https://img.shields.io/badge/Supabase-blue" height=20> <img src="https://img.shields.io/badge/Postgres-darkgreen" height=20> |
+| [Vercel AI](/) | - | HERE | <img src="https://img.shields.io/badge/OpenAI-firebrick" height=20> <img src="https://img.shields.io/badge/Supabase-blue" height=20> <img src="https://img.shields.io/badge/Postgres-darkgreen" height=20> |
 
-## Providers and Frameworks
-
-| Cookbook | Python | Node |
-| :- | :- | :- | 
-| [Stability AI](/) | HERE | HERE | 
-| [Vercel AI](/) | - | HERE | 
-
-## Monitoring and Analytics
+## Debugging and Analysing LLM Requests
 
 | Cookbook | Python | Node | Tags |
 | :- | :- | :- | :- |
@@ -32,7 +26,7 @@ Created by [Portkey](https://portkey.ai/)'s commmunity of 🏗️ Practitioners 
 | :- | :- | :- | :- |
 | [Title](/) | | | <img src="https://img.shields.io/badge/OpenAI-firebrick" height=20> <img src="https://img.shields.io/badge/Supabase-blue" height=20> <img src="https://img.shields.io/badge/Postgres-darkgreen" height=20> |
 
-## Reliability Challenges and Caching
+## Solving Reliability Challenges and Caching
 
 | Cookbook | Python | Node | Tags |
 | :- | :- | :- | :- |
