@@ -26,7 +26,7 @@ Created by [Portkey](https://portkey.ai/)'s commmunity of 🏗️ Practitioners 
 | :- | :- | :- | :- |
 | [Title](/) | | |  `openai`, `supabase`, `postgres` |
 
-### Solving Reliability Challenges and Caching
+### Solving Reliability and Caching Challenges
 
 | Cookbook | Python | Node | Tags |
 | :- | :- | :- | :- |
