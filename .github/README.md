@@ -7,32 +7,32 @@ Created by [Portkey](https://portkey.ai/)'s commmunity of 🏗️ Practitioners 
 
 <a href="https://discord.gg/sDk9JaNfK8" target="_blank"><img src="https://img.shields.io/discord/1143393887742861333?logo=discord" alt="Discord" height=22></a>
 
-## Frameworks and Provider Examples
+### Frameworks and Provider Examples
 
 | Cookbook | Python | Node | Tags |
 | :- | :- | :- | :- |
 | [Stability AI](/) | HERE | HERE | `openai`, `supabase`, `postgres` |
 | [Vercel AI](/) | - | HERE |  `openai`, `supabase`, `postgres` |
 
-## Debugging and Analysing LLM Requests
+### Debugging and Analysing LLM Requests
 
 | Cookbook | Python | Node | Tags |
 | :- | :- | :- | :- |
 | [Title](/) | | |  `openai`, `supabase`, `postgres` |
 
-## Improving with User Feedback and Experimentation
+### Improving with User Feedback and Experimentation
 
 | Cookbook | Python | Node | Tags |
 | :- | :- | :- | :- |
 | [Title](/) | | |  `openai`, `supabase`, `postgres` |
 
-## Solving Reliability Challenges and Caching
+### Solving Reliability Challenges and Caching
 
 | Cookbook | Python | Node | Tags |
 | :- | :- | :- | :- |
 | [Title](/) | | |  `openai`, `supabase`, `postgres` |
 
-## Managing and Deploying Prompts
+### Managing and Deploying Prompts
 
 | Cookbook | Python | Node | Tags |
 | :- | :- | :- | :- |
