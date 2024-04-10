@@ -1,5 +1,5 @@
 # Portkey Practitioners' Cookbooks
-![header](../images/header.png)
+<img src="../images/header.png" height=400 />
 
 ### Curated and Open Source cookbooks with strategies, tactics, and code for tackling the **production challenges** of LLMs
 
