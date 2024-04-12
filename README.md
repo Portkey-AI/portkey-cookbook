@@ -9,7 +9,7 @@
   </p>
 </div>
 
-<i> Resources focus on <b>how to use those features and why they matter</b> rather than what they are and how they work. Are you interested in the latter? Visit <a href="https://portkey.ai/docs">portkey documentation</a>.</i>
+`<i>` Resources focus on `<b>`how to use those features and why they matter`</b>` rather than what they are and how they work. Are you interested in the latter? Visit `<a href="https://portkey.ai/docs">`portkey documentation`</a>`.`</i>`
 
 ---
 
@@ -29,6 +29,7 @@
 - [Anyscale and Portkey Integration Guide](./integrations/anyscale-portkey.md)
 - [Mistral and Portkey Integration Guide](./integrations/mistral-portkey.md)
 - [Use prompts from LangChainHub, Requests through Portkey](./integrations/how-to-use-prompts-from-langchain-hub-and-requests-through-portkey.md)
+- [Vercel AI and Portkey Integration Guide](./integrations/integrations/vercel-ai-sdk-and-portkey-integration-guide.md)
 
 #### Want to explore more?
 
