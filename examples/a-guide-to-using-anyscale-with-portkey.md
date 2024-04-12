@@ -76,7 +76,7 @@ Learn [how to create Virtual Keys](https://portkey.ai/docs/product/ai-gateway-st
 
 ## Observability
 
-You might be leaving a lot of information on the table that can be monitored with Portkey.
+Portkey can help you keep better track of your information and ensure that you're not missing out on any valuable insights.
 
 1. Understand the number of tokens used and the nature of the token-costs attached.
 2. Know when and what has caused an issue in production and troubleshoot it.
@@ -200,7 +200,7 @@ For comprehensive information and more features, see the [Observability docs](ht
 
 ## Production Reliability
 
-Portkey’s multimodal AI gateway provides ease and flexibility to increase reliability and save costs for your gen AI apps.
+Portkey’s multimodal AI gateway lets you tackle failure scenarios and make your app more reliable and robust.
 
 - AI gateway can cache LLM responses and serve them instantly.
 - Furthermore, it can enable your app to switch from one LLM to another in case of unexpected failures, ensuring uninterrupted service.
