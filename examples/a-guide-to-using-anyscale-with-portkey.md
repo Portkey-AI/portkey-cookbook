@@ -2,7 +2,9 @@
 
 ## LLMs in Production
 
-Solving the challenges of LLM-based apps in production can be very challenging. You need to consider things like token costs, interoperability between models, and the need to monitor and continuously improve proactively. Implementing these capabilities requires resources to manage infrastructure instead of solving customer problems. Nevertheless, Portkey is designed to help you overcome these LLMOps challenges.
+Anyscale provides inference APIs to the popular open-source LLMs. Keeping track of token costs, operating with various models, and monitoring and improving your app can be challenging. With Portkey, you get features that will help you solve these production challenges in minutes.
+
+Dive into this guide for a comprehensive view of everything you could do with Portkey. Let's go!
 
 ## Portkey
 
