@@ -9,7 +9,7 @@
   </p>
 </div>
 
-`<i>` Resources focus on `<b>`how to use those features and why they matter `</b>` rather than what they are and how they work. Are you interested in the latter? Visit `<a href="https://portkey.ai/docs">`portkey documentation `</a>`.`</i>`
+`<i>` Resources focus on `<b>`how to use those features and why they matter`</b>` rather than what they are and how they work. Are you interested in the latter? Visit `<a href="https://portkey.ai/docs">`portkey documentation`</a>`.`</i>`
 
 ---
 
