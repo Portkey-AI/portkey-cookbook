@@ -329,7 +329,7 @@ print(response.choices[0].message.content)
 
 ## Continous Improvement
 
-Assessing the effectiveness of LLMs (Language Model Models) can be a difficult task, as certain models may perform better for your specific needs, while others may excel in certain scenarios.
+Assessing the user impact of your prompts can be a difficult task, as certain prompts may have great user delight while others may lack it.
 
 But what if your users could rate the quality of the responses provided by your LLMs? With Portkey, this is possible. By collecting user feedback, you can fine-tune your models and continuously improve their accuracy through autonomous fine-tuning. In other words, user feedback becomes the dataset used to train these models.
 
