@@ -67,7 +67,7 @@ console.log(render.data.data);
 
 ```sh
 {
-  model: 'gpt-4',
+  model: 'gpt-4', // 'gpt-3.5-turbo' retuned on passing argument
   n: 1,
   top_p: 1,
   max_tokens: 512,
