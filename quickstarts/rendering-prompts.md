@@ -133,4 +133,6 @@ In a small, peaceful town lived two mischievous friends, Tom the cat and Jerry t
 One sunny day, they discovered a treasure map painted on the old town wall. They decided to follow the map, which, to their surprise, led them to the back of their own house. They dug up and found a chest full of delicious food and refreshing drinks. They had a grand feast and shared the food with the whole town, bringing joy and smiles. It was known as the best day ever in the town, all thanks to our heroes, Tom and Jerry.
 ```
 
+### Wrap Up
+
 You’ve now successfully learned to render the prompt details and use them to call the chat completions API. You can now render the prompt details from your library and use them in your use-cases.
