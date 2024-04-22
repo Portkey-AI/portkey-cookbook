@@ -86,7 +86,7 @@ console.log(render.data.data);
 
 ## 4. Trigger the Prompt
 
-Make chat completions to any LLM [mostly](https://portkey.ai/docs/welcome/integration-guides) using OpenAI SDK client through Portkey. You can trigger an completion using the `chat.completions.create({..})`.
+Make chat completions to any LLM ([mostly](https://portkey.ai/docs/welcome/integration-guides)) using OpenAI SDK client through Portkey. You can trigger an completion using the `chat.completions.create({..})`.
 
 ```js
 import OpenAI from 'openai';
