@@ -35,3 +35,4 @@ Resources focus on <b>how to use those features and why they matter </b> rather 
 
 - [101 on Portkey Gateway Configs](./product/101-portkey-gateway-configs.md) [ [+ See Python Notebook](./product/101_portkey_gateway_configs.ipynb) ]
 - [Build an article suggestion app with Supabase pgvector, and Portkey](./examples/build-an-article-suggestion-app-with-supabase-pgvector-and-portkey.md)
+- [Tracing Assistants API](./product/tracing-assistants-api.ipynb)
