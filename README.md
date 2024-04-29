@@ -29,7 +29,7 @@ Resources focus on <b>how to use those features and why they matter </b> rather 
 - [Anyscale and Portkey Integration Guide](./integrations/anyscale-portkey.md)
 - [Mistral and Portkey Integration Guide](./integrations/mistral-portkey.md)
 - [Use prompts from LangChainHub, Requests through Portkey](./integrations/how-to-use-prompts-from-langchain-hub-and-requests-through-portkey.md)
-- [Vercel AI and Portkey Integration Guide](./integrations/integrations/vercel-ai-sdk-and-portkey-integration-guide.md)
+- [Vercel AI and Portkey Integration Guide](./integrations/vercel-ai-sdk-and-portkey-integration-guide.md)
 
 #### Want to explore more?
 
