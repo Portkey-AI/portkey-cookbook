@@ -1,11 +1,11 @@
 # Table of Contents
 
-Chat Completions Call using Portkey SDK
-Chat Completions Call using OpenAI SDK
-Chat Completions Call with NPM Library: Axios
-Chat Completions Call using NPM Library: `got`
-Chat Completions Call using `Curl`
-Chat Completions Call with AI Gateway Configs
+[Chat Completions Call using Portkey SDK](#chat-completions-call-using-portkey-sdk)
+[Chat Completions Call using OpenAI SDK](#chat-completions-call-using-openai-sdk)
+[Chat Completions Call with NPM Library: Axios](#chat-completions-call-with-npm-package-axios)
+[Chat Completions Call using NPM Library: `got`](#chat-completions-call-with-npm-package-got)
+[Chat Completions Call using `Curl`](#chat-completions-call-using-curl)
+[Chat Completions Call with AI Gateway Configs](#chat-completions-call-with-ai-gateway-configs)
 
 <hr>
 
