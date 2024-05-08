@@ -23,6 +23,7 @@ Resources focus on <b>how to use those features and why they matter </b> rather 
 - [Prevent unnecessary LLM requests with the Portkey Cache](./ai-gateway/prevent-unnecessary-llm-requests-with-the-portkey-cache.md)
 - [Set up Fallback from Stable Diffusion to Dall-E](./ai-gateway/set-up-fallback-from-stable-diffusion-to-dall-e.ipynb) (_Python_)
 - [Smart Fallback with Model-Optimized Prompts](./ai-gateway/smart-fallback-with-model-optimized-prompts.md)
+- [How to monitor dev, staging and production environments](./product/how-to-monitor-dev-staging-and-production-environments.md)
 
 #### Integration guides
 
