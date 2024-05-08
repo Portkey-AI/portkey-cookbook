@@ -286,9 +286,9 @@ curl -X POST "https://api.portkey.ai/v1/chat/completions" \
 For **example** if the requests to LLMs should:
 
 - be retried upto 3 times on response status codes `408`, `429`, `401`
-- should fallback from openai to anyscale + anthropic models
-- fallen back requests: split 30% to anyscale models and 70% to anthorpic models
-- not wait for response longer than 10s
+- should fallback from openai to anyscale:anthropic models
+- fallen back requests: split 30% to anyscale models and 70% to anthropic models
+- not wait for response longer than 20s
 
 **Gateway Config**
 
