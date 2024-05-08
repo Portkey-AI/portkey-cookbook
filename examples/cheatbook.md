@@ -8,11 +8,16 @@
 [Chat Completions Call using NPM Library: `got`](#chat-completions-call-with-npm-package-got)
 [Chat Completions Call using `Curl`](#chat-completions-call-using-curl)
 [Chat Completions Call with AI Gateway Configs](#chat-completions-call-with-ai-gateway-configs)
-Chat Completions Call per request (not during instantiation)
+[Chat Completions Call per Request Configuration](#chat-completions-call-per-request-configuration)
 
 **Embeddings**
 
+[Embeddings Call using Portkey SDK](#embeddings-call-using-portkey-sdk)
+[Embeddings Call using OpenAI SDK](#embeddings-call-using-openai-sdk)
+
 **Prompt Completions**
+
+Prompt Completions using Portkey SDK
 
 <hr>
 
@@ -32,17 +37,17 @@ import { Portkey } from 'portkey-ai';
 
 const portkey = new Portkey({
   apiKey: process.env.PORTKEY_API_KEY,
-  virtualKey: process.env.LLM_VIRTUAL_KEY
+  virtualKey: process.env.LLM_VIRTUAL_KEY,
 });
 
 const response = await portkey.chat.completions.create({
   messages: [
     {
       role: 'user',
-      content: 'What is LLMOps?'
-    }
+      content: 'What is LLMOps?',
+    },
   ],
-  model: 'gpt-3.5-turbo'
+  model: 'gpt-3.5-turbo',
 });
 
 console.log(response.choices[0].message.content);
@@ -60,18 +65,18 @@ const openai = new OpenAI({
   defaultHeaders: createHeaders({
     provider: 'openai',
     apiKey: process.env.PORTKEY_API_KEY,
-    virtualKey: process.env.LLM_VIRTUAL_KEY
-  })
+    virtualKey: process.env.LLM_VIRTUAL_KEY,
+  }),
 });
 
 const response = await openai.chat.completions.create({
   messages: [
     {
       role: 'user',
-      content: `What is LLMOps`
-    }
+      content: `What is LLMOps`,
+    },
   ],
-  model: 'gpt-4'
+  model: 'gpt-4',
 });
 
 console.log(response.choices[0].message.content);
@@ -92,18 +97,18 @@ const client = new OpenAI({
   baseURL: PORTKEY_GATEWAY_URL,
   defaultHeaders: createHeaders({
     provider: 'openai',
-    apiKey: process.env.PORTKEY_API_KEY
-  })
+    apiKey: process.env.PORTKEY_API_KEY,
+  }),
 });
 
 const response = await client.chat.completions.create({
   messages: [
     {
       role: 'user',
-      content: `What is LLMOps?`
-    }
+      content: `What is LLMOps?`,
+    },
   ],
-  model: 'gpt-4'
+  model: 'gpt-4',
 });
 
 console.log(response.choices[0].message.content);
@@ -120,18 +125,18 @@ const client = new OpenAI({
   baseURL: PORTKEY_GATEWAY_URL,
   defaultHeaders: createHeaders({
     provider: 'perplexity-ai',
-    apiKey: process.env.PORTKEY_API_KEY
-  })
+    apiKey: process.env.PORTKEY_API_KEY,
+  }),
 });
 
 const response = await client.chat.completions.create({
   messages: [
     {
       role: 'user',
-      content: `What is LLMOps?`
-    }
+      content: `What is LLMOps?`,
+    },
   ],
-  model: 'pplx-70b-chat'
+  model: 'pplx-70b-chat',
 });
 
 console.log(response.choices[0].message.content);
@@ -147,16 +152,20 @@ import axios from 'axios';
 const headers = {
   'Content-Type': 'application/json',
   'x-portkey-api-key': '<PORTKEY_API_KEY>',
-  'x-portkey-virtual-key': '<LLM_VIRTUAL_KEY>'
+  'x-portkey-virtual-key': '<LLM_VIRTUAL_KEY>',
 };
 
 const data = {
   model: 'gpt-4',
-  messages: [{ role: 'user', content: 'What is LLMOps' }]
+  messages: [{ role: 'user', content: 'What is LLMOps' }],
 };
 
 try {
-  const { data: response } = await axios.post('https://api.portkey.ai/v1/chat/completions', data, { headers: headers });
+  const { data: response } = await axios.post(
+    'https://api.portkey.ai/v1/chat/completions',
+    data,
+    { headers: headers }
+  );
   console.log(response.choices[0].message.content);
 } catch (error) {
   console.error(error);
@@ -174,16 +183,20 @@ const headers = {
   'Content-Type': 'application/json',
   'x-portkey-api-key': 'PORTKEY_API_KEY',
   'x-portkey-provider': 'openai', // Provider name
-  Authorization: 'Bearer sk-******' // Provider API Key
+  Authorization: 'Bearer sk-******', // Provider API Key
 };
 
 const data = {
   model: 'gpt-4',
-  messages: [{ role: 'user', content: 'What is LLMOps' }]
+  messages: [{ role: 'user', content: 'What is LLMOps' }],
 };
 
 try {
-  const { data: response } = await axios.post('https://api.portkey.ai/v1/chat/completions', data, { headers: headers });
+  const { data: response } = await axios.post(
+    'https://api.portkey.ai/v1/chat/completions',
+    data,
+    { headers: headers }
+  );
   console.log(response.choices[0].message.content);
 } catch (error) {
   console.error(error);
@@ -202,12 +215,12 @@ const url = 'https://api.portkey.ai/v1/chat/completions';
 const options = {
   headers: {
     'x-portkey-api-key': 'PORTKEY_API_KEY',
-    'x-portkey-virtual-key': 'LLM_VIRTUAL_KEY'
+    'x-portkey-virtual-key': 'LLM_VIRTUAL_KEY',
   },
   json: {
     model: 'gpt-3.5-turbo',
-    messages: [{ role: 'user', content: 'What is LLMOps?' }]
-  }
+    messages: [{ role: 'user', content: 'What is LLMOps?' }],
+  },
 };
 
 let { body: response } = await got.post(url, options);
@@ -226,12 +239,12 @@ const options = {
   headers: {
     'x-portkey-api-key': 'PORTKEY_API_KEY',
     'x-portkey-provider': 'openai', // Provider name
-    Authorization: 'Bearer sk-************' // Provider API Key
+    Authorization: 'Bearer sk-************', // Provider API Key
   },
   json: {
     model: 'gpt-3.5-turbo',
-    messages: [{ role: 'user', content: 'What is LLMOps?' }]
-  }
+    messages: [{ role: 'user', content: 'What is LLMOps?' }],
+  },
 };
 
 let { body: response } = await got.post(url, options);
@@ -361,12 +374,12 @@ const portkey = new Portkey({
   apiKey: process.env.PORTKEY_API_KEY,
   virtualKey: process.env.LLM_VIRTUAL_KEY,
   // Option: Reference to Configs in the Portkey App
-  config: 'pc-xxxxxxx-d0'
+  config: 'pc-xxxxxxx-d0',
 });
 
 const response = await portkey.chat.completions.create({
   messages: [{ role: 'user', content: 'What is LLMOps?' }],
-  model: 'gpt-3.5-turbo'
+  model: 'gpt-3.5-turbo',
 });
 
 console.log(response.choices[0].message.content);
@@ -425,13 +438,13 @@ const openai = new OpenAI({
     provider: 'openai',
     apiKey: process.env.PORTKEY_API_KEY,
     // Option: Reference to Configs in the Portkey App
-    config: 'pc-xxxxxxx-d0'
-  })
+    config: 'pc-xxxxxxx-d0',
+  }),
 });
 
 const response = await openai.chat.completions.create({
   messages: [{ role: 'user', content: `What is LLMOps` }],
-  model: 'gpt-4'
+  model: 'gpt-4',
 });
 
 console.log(response.choices[0].message.content);
@@ -532,3 +545,115 @@ curl -X POST "https://api.portkey.ai/v1/chat/completions" \
 ```
 
 </details>
+
+### Chat Completions Call per Request Configuration
+
+Pass the [parameters](https://portkey.ai/docs/api-reference/portkey-sdk-client#parameters) as follows to apply configuration at each request instead of all by default (using instantiation).
+
+```js
+import { Portkey } from 'portkey-ai';
+
+// Instantiate
+const portkey = new Portkey({
+  apiKey: process.env.PORTKEY_API_KEY,
+  virtualKey: process.env.LLM_VIRTUAL_KEY,
+});
+
+const response = await portkey.chat.completions.create(
+  {
+    messages: [
+      {
+        role: 'user',
+        content: 'What is LLMOps?',
+      },
+    ],
+    model: 'gpt-3.5-turbo',
+  },
+  // Per Request Configuration
+  {
+    traceID: '<traceID>',
+    metadata: {
+      // meta information
+    },
+  }
+);
+
+console.log(response.choices[0].message.content);
+```
+
+## Embeddings
+
+### Embeddings Call using Portkey SDK
+
+```js
+import { Portkey } from 'portkey-ai';
+
+const portkey = new Portkey({
+  apiKey: process.env.PORTKEY_API_KEY,
+  virtualKey: process.env.LLM_VIRTUAL_KEY,
+});
+
+const { data } = await portkey.embeddings.create({
+  input: 'The Sky is Blue',
+  model: 'text-embedding-3-large',
+});
+
+console.log(data[0].embedding);
+```
+
+<details>
+
+<summary> Embeddings Call per Request Configuration</summary>
+
+Pass the [parameters](https://portkey.ai/docs/api-reference/portkey-sdk-client#parameters) as follows to apply configuration at each request instead of all by default (using instantiation).
+
+```js
+import { Portkey } from 'portkey-ai';
+
+// Initialize the Portkey client
+const portkey = new Portkey({
+  apiKey: process.env.PORTKEY_API_KEY,
+  virtualKey: process.env.LLM_VIRTUAL_KEY,
+});
+
+const { data } = await portkey.embeddings.create(
+  {
+    input: 'The Sky is Blue',
+    model: 'text-embedding-3-large',
+  },
+  // Per Request Configuration
+  {
+    config: 'pc-******s873',
+    traceID: 'test',
+  }
+);
+
+console.log(data[0].embedding);
+```
+
+</details>
+
+### Embeddings call using OpenAI SDK
+
+```js
+import OpenAI from 'openai';
+import { PORTKEY_GATEWAY_URL, createHeaders } from 'portkey-ai';
+
+const openai = new OpenAI({
+  apiKey: '<IGNORED>',
+  baseURL: PORTKEY_GATEWAY_URL,
+  defaultHeaders: createHeaders({
+    provider: 'openai',
+    apiKey: process.env.PORTKEY_API_KEY,
+    virtualKey: process.env.LLM_VIRTUAL_KEY,
+  }),
+});
+
+const { data } = await openai.embeddings.create({
+  model: 'text-embedding-ada-002',
+  input: 'The quick brown fox jumped over the lazy dog',
+  encoding_format: 'float',
+});
+
+console.log(data[0].embedding);
+```
