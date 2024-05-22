@@ -45,7 +45,7 @@ Next, we will create a configs object that influences the behavior of the reques
 }
 ```
 
-This configuration instructs Portkey to use a _fallback_ strategy with the requests. The _targets_ array lists the virtual keys of LLMs in the order Portkey should fallback to an alternative.
+This configuration instructs Portkey to use a \_fallback \_strategy with the requests. The \_targets \_array lists the virtual keys of LLMs in the order Portkey should fallback to an alternative.
 
 Most users find it way more cleaner to define the configs in the Portkey UI and reference the config ID in the code. [Try it out](https://portkey.ai/docs/product/ai-gateway-streamline-llm-integrations/configs#creating-configs).
 
@@ -73,30 +73,6 @@ const portkey = new Portkey({
 Always reference the credentials from the environment variables to prevent exposure of any sensitive data. Portkey will automatically infer the LLM providers based on the passed virtual keys.
 
 > The Azure OpenAI virtual key only needs to be set up once, and it will then be accessible through Portkey in all subsequent API calls.
-
-<details>
-
-<summary>Fallback Configs without virtual keys</summary>
-
-```json
-{
-  "strategy": {
-    "mode": "fallback"
-  },
-  "targets": [
-    {
-      "provider": "openai",
-      "api_key": "sk-xxxxxxxxpRT4xxxx5"
-    },
-    {
-      "provider": "azure-openai",
-      "api_key": "*******"
-    }
-  ]
-}
-```
-
-</details>
 
 ## 3. Make a request
 
